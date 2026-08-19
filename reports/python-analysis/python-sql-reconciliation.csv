@@ -1,0 +1,10 @@
+metric_id,sql_value,python_value,difference,tolerance,status,notes
+MET-003,13494400.74,13494400.74,0,0.01,PASS,Governed model population independently queried
+MET-005,137.418922188617,137.418922188617,0,0.01,PASS,Governed model population independently queried
+MET-006,94986,94986,0,1e-09,PASS,Governed model population independently queried
+MET-007,0.0303939527930431,0.0303939527930432,8.67361737988404e-17,1e-09,PASS,Governed model population independently queried
+MET-008,12.558217098052,12.558217098052,0,1e-09,PASS,Governed model population independently queried
+MET-009,0.0811236653882035,0.0811236653882036,9.71445146547012e-17,1e-09,PASS,Governed model population independently queried
+MET-010,4.08679341528753,4.08679341528753,0,1e-09,PASS,Governed model population independently queried
+MET-014,16008872.12,16008872.12,0,0.01,PASS,Governed model population independently queried
+MET-015,0.918876334611796,0.918876334611796,0,1e-09,PASS,Governed model population independently queried

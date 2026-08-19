@@ -41,6 +41,13 @@
 | AC-035 | Customer SQL uses stable identity and observed-window language; seller/category comparisons expose volume context. | Governed outputs and findings review. |
 | AC-036 | Delivery-review analysis uses the approved order-level policy and avoids causal claims. | Review query and evidence register. |
 | AC-037 | Complete SQL analysis reruns deterministically with no hard validation failures. | Runner, hashes, and reproducibility results. |
+| AC-038 | Selected governed metrics reconcile between Python and SQL within approved tolerances. | Python/SQL reconciliation artifact. |
+| AC-039 | Customer and cohort analysis uses `customer_unique_id` and observed-first-purchase terminology. | Reusable customer/cohort modules and outputs. |
+| AC-040 | Unobservable cohort follow-up is NULL/censored and partial cohorts remain disclosed. | Cohort observability and matrix validation. |
+| AC-041 | RFM uses a deterministic dataset cutoff and tests quantile feasibility without forced tie-breaking. | RFM result and feasibility report. |
+| AC-042 | Any RFM segmentation status follows evidence; an unsupported polished segmentation is prohibited. | Feasibility decision and absence-of-segmentation test. |
+| AC-043 | Python figures and compact results regenerate deterministically without altering governed KPI definitions. | Figure manifest, reproducibility hashes, and validation results. |
+| AC-044 | Python findings use non-causal, observation-window-bounded language and contain no final recommendations. | Finding register and findings review. |
 
 ## Phase 0 acceptance
 

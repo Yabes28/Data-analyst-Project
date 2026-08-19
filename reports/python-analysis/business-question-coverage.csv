@@ -1,0 +1,3 @@
+business_requirement_id,analysis_id,status,evidence_output,finding_id,limitation
+BR-007,AN-004,ANSWERED,cohort-return-matrix.csv,PYFIND-004,Observed-first-purchase cohorts; censoring explicit
+BR-008,AN-005,ANSWERED — RFM NOT RECOMMENDED,rfm-feasibility.csv,PYFIND-005,No forced segmentation

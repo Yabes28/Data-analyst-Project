@@ -1,0 +1,4 @@
+test_id,scope,expected,observed,status,notes
+PY-REPRO-001,compact result artifacts,identical hashes across consecutive runs,identical hashes,PASS,Includes cohort RFM reconciliation and findings
+PY-REPRO-002,figures,4 identical PNG hashes,4 identical PNG hashes,PASS,Matplotlib deterministic rendering
+PY-REPRO-003,figure manifest and finding register,identical hashes,identical hashes,PASS,Traceability regenerated deterministically

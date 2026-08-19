@@ -1,0 +1,5 @@
+figure_id,analysis_id,title,analytical_question,source_model,population,metric_or_variable,output_file,finding_ids,limitation,portfolio_candidate,notes
+FIG-001,AN-003,Observed Customer Purchase Frequency,How concentrated is observed frequency?,MODEL-001;MODEL-012,commercial customers,eligible order count,figures/fig-001-customer-frequency.png,PYFIND-002,Bounded window,True,
+FIG-002,AN-004,Observed Cohort Return Rates,What repeat activity is observable by cohort?,MODEL-001,complete-period observed first-purchase cohorts,observed cohort return rate,figures/fig-002-observed-cohort-heatmap.png,PYFIND-004,Censored cells masked,True,Month 0 is construction
+FIG-003,AN-008,Delivery Lead-Time Distribution,How dispersed are delivery times?,MODEL-001,endpoint-qualified delivered orders,delivery lead time,figures/fig-003-delivery-distribution.png,PYFIND-006,Long values preserved,True,Diagnostic median does not replace KPI
+FIG-004,AN-010,Order-Level Review Scores by Delivery Outcome,How do score distributions differ?,MODEL-005;MODEL-012,endpoint-qualified reviewed orders,order-level review score,figures/fig-004-review-delivery.png,PYFIND-007,Association only,True,

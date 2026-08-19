@@ -1,0 +1,8 @@
+business_requirement_ids,analysis_id,source_model,notebook_or_script,figure_id,finding_id,status,result
+BR-001;BR-002,AN-001,MODEL-010,run_python_analysis.py,,PYFIND-001,SUPPORTED,reports/python-analysis/results/
+BR-005;BR-006,AN-003,MODEL-001;MODEL-012,run_python_analysis.py,FIG-001,PYFIND-002,SUPPORTED_WITH_LIMITATION,reports/python-analysis/results/
+BR-005;BR-006,AN-003,MODEL-012,run_python_analysis.py,,PYFIND-003,SUPPORTED_WITH_LIMITATION,reports/python-analysis/results/
+BR-007,AN-004,MODEL-001,run_python_analysis.py,FIG-002,PYFIND-004,SUPPORTED_WITH_LIMITATION,reports/python-analysis/results/
+BR-008,AN-005,MODEL-001;MODEL-012,run_python_analysis.py,,PYFIND-005,SUPPORTED_WITH_LIMITATION,reports/python-analysis/results/
+BR-015;BR-017,AN-008,MODEL-001,run_python_analysis.py,FIG-003,PYFIND-006,SUPPORTED,reports/python-analysis/results/
+BR-019,AN-010,MODEL-005;MODEL-012,run_python_analysis.py,FIG-004,PYFIND-007,SUPPORTED_WITH_LIMITATION,reports/python-analysis/results/

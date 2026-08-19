@@ -1,0 +1,2 @@
+variable,statistic_type,population,count,missing_count,zero_count,mean,median,std,minimum,p25,p75,p90,p95,p99,maximum,skewness
+delivery_lead_time_days,Diagnostic Statistic,endpoint-qualified delivered orders,96470,0,0,12.558217098052,10.2174768518519,9.54615637792742,0.533414351851852,6.7662037037037,15.7201822916667,23.0963773148148,29.2740462962963,46.0502618055555,209.628611111111,3.83337707342412

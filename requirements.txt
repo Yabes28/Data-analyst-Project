@@ -4,5 +4,5 @@ numpy==1.25.2
 matplotlib==3.7.3
 notebook==7.0.3
 
-# Recommended Phase 4/5 local analytical engine; installation deferred.
+# Adopted Phase 4–6 local analytical engine.
 duckdb==1.4.5

@@ -36,12 +36,13 @@ Only the approved phase may be executed. Specifications must precede implementat
 
 **Work:** Execute traceable business analyses using readable CTEs, joins, date logic, windows, rankings, cohorts, and validation queries where appropriate.  
 **Exit criteria:** Approved `AN-*` SQL runs reproducibly; outputs cite requirements/metrics; complete-period and coverage rules are applied; peer-style correctness review completed.
-**Status:** Complete — 13 governed SQL queries, all core metrics, 15/15 reconciliations, 51/51 SQL controls, quantified findings, coverage, and two-run reproducibility evidence produced. Awaiting explicit Phase 5 approval.
+**Status:** Approved and complete — owner final approval received 2026-08-19.
 
 ## Phase 6 — Python EDA & customer analysis
 
 **Work:** Perform distributions, statistical summaries, visual EDA, customer frequency/cohorts, and RFM only if justified; move reusable logic from notebooks into modules.  
 **Exit criteria:** Notebooks run in order from documented environment; figures are reproducible; SQL/Python shared metrics reconcile; observational limitations are stated.
+**Status:** Complete — governed distributions, stable-customer analysis, censoring-aware cohorts, evidence-based RFM feasibility, figures, reconciliation, and validation implemented. Awaiting explicit Phase 6 approval.
 
 ## Phase 7 — Power BI analytical dataset & dashboard
 
