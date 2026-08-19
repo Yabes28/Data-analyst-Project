@@ -1,0 +1,226 @@
+issue_id,metric_id,impact,reason
+DQ-011,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-003,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-004,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-005,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-006,REQUIRES_RULE,Using customer_id as a stable identity understates repeat behavior.
+DQ-011,MET-007,REQUIRES_RULE,Using customer_id as a stable identity understates repeat behavior.
+DQ-011,MET-008,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-009,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-012,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-013,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-011,MET-015,NO_IMPACT,No direct Phase 2 impact identified
+DQ-016,MET-001,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-002,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-003,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-004,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-005,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-006,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-007,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-008,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-009,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-010,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-011,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-012,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-013,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-014,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-016,MET-015,REQUIRES_RULE,Metric populations and denominators can differ by source coverage.
+DQ-015,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-015,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-015,MET-003,BLOCKING,Can materially corrupt monetary metrics and conclusions.
+DQ-015,MET-004,BLOCKING,Can materially corrupt monetary metrics and conclusions.
+DQ-015,MET-005,BLOCKING,Can materially corrupt monetary metrics and conclusions.
+DQ-015,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-015,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-015,MET-008,NO_IMPACT,No direct Phase 2 impact identified
+DQ-015,MET-009,NO_IMPACT,No direct Phase 2 impact identified
+DQ-015,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-015,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-015,MET-012,BLOCKING,Can materially corrupt monetary metrics and conclusions.
+DQ-015,MET-013,BLOCKING,Can materially corrupt monetary metrics and conclusions.
+DQ-015,MET-014,BLOCKING,Can materially corrupt monetary metrics and conclusions.
+DQ-015,MET-015,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-003,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-004,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-005,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-008,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-009,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-010,REQUIRES_RULE,Average review score and coverage depend on an unsupported canonical rule.
+DQ-010,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-012,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-013,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-010,MET-015,NO_IMPACT,No direct Phase 2 impact identified
+DQ-013,MET-001,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-002,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-003,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-004,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-005,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-006,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-007,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-008,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-009,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-010,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-011,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-012,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-013,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-014,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-013,MET-015,BLOCKING,Direct ZIP joins multiply rows and geography may be misassigned.
+DQ-012,MET-001,POTENTIAL_IMPACT,Silent inner joins undercount category-based metrics.
+DQ-012,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-012,MET-003,POTENTIAL_IMPACT,Silent inner joins undercount category-based metrics.
+DQ-012,MET-004,POTENTIAL_IMPACT,Silent inner joins undercount category-based metrics.
+DQ-012,MET-005,POTENTIAL_IMPACT,Silent inner joins undercount category-based metrics.
+DQ-012,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-012,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-012,MET-008,NO_IMPACT,No direct Phase 2 impact identified
+DQ-012,MET-009,NO_IMPACT,No direct Phase 2 impact identified
+DQ-012,MET-010,POTENTIAL_IMPACT,Silent inner joins undercount category-based metrics.
+DQ-012,MET-011,POTENTIAL_IMPACT,Silent inner joins undercount category-based metrics.
+DQ-012,MET-012,POTENTIAL_IMPACT,Silent inner joins undercount category-based metrics.
+DQ-012,MET-013,POTENTIAL_IMPACT,Silent inner joins undercount category-based metrics.
+DQ-012,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-012,MET-015,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-001,POTENTIAL_IMPACT,Timezone-sensitive/hour-of-day interpretation cannot be verified.
+DQ-005,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-003,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-004,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-005,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-008,POTENTIAL_IMPACT,Timezone-sensitive/hour-of-day interpretation cannot be verified.
+DQ-005,MET-009,POTENTIAL_IMPACT,Timezone-sensitive/hour-of-day interpretation cannot be verified.
+DQ-005,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-012,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-013,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-005,MET-015,POTENTIAL_IMPACT,Timezone-sensitive/hour-of-day interpretation cannot be verified.
+DQ-006,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-003,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-004,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-005,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-008,REQUIRES_RULE,Duration metrics may be negative or operational sequence may be misinterpreted.
+DQ-006,MET-009,REQUIRES_RULE,Duration metrics may be negative or operational sequence may be misinterpreted.
+DQ-006,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-012,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-013,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-006,MET-015,REQUIRES_RULE,Duration metrics may be negative or operational sequence may be misinterpreted.
+DQ-017,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-003,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-004,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-005,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-008,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-009,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-012,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-013,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-017,MET-015,NO_IMPACT,No direct Phase 2 impact identified
+DQ-008,MET-001,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-002,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-003,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-004,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-005,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-006,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-007,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-008,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-009,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-010,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-011,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-012,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-013,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-014,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-008,MET-015,REQUIRES_RULE,A single implicit status filter would create inconsistent KPI populations.
+DQ-009,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-003,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-004,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-005,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-008,REQUIRES_RULE,Delivery lead time and late-rate denominators require explicit endpoint eligibility.
+DQ-009,MET-009,REQUIRES_RULE,Delivery lead time and late-rate denominators require explicit endpoint eligibility.
+DQ-009,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-012,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-013,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-009,MET-015,REQUIRES_RULE,Delivery lead time and late-rate denominators require explicit endpoint eligibility.
+DQ-007,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-007,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-007,MET-003,POTENTIAL_IMPACT,Zero treatment or automatic outlier removal could bias value metrics.
+DQ-007,MET-004,POTENTIAL_IMPACT,Zero treatment or automatic outlier removal could bias value metrics.
+DQ-007,MET-005,POTENTIAL_IMPACT,Zero treatment or automatic outlier removal could bias value metrics.
+DQ-007,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-007,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-007,MET-008,NO_IMPACT,No direct Phase 2 impact identified
+DQ-007,MET-009,NO_IMPACT,No direct Phase 2 impact identified
+DQ-007,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-007,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-007,MET-012,POTENTIAL_IMPACT,Zero treatment or automatic outlier removal could bias value metrics.
+DQ-007,MET-013,POTENTIAL_IMPACT,Zero treatment or automatic outlier removal could bias value metrics.
+DQ-007,MET-014,POTENTIAL_IMPACT,Zero treatment or automatic outlier removal could bias value metrics.
+DQ-007,MET-015,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-003,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-004,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-005,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-008,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-009,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-012,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-013,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-014,MET-015,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-003,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-004,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-005,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-006,REQUIRES_RULE,Late entrants have less opportunity to repeat; recency depends on an arbitrary dataset endpoint.
+DQ-018,MET-007,REQUIRES_RULE,Late entrants have less opportunity to repeat; recency depends on an arbitrary dataset endpoint.
+DQ-018,MET-008,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-009,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-012,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-013,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-018,MET-015,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-001,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-002,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-003,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-004,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-005,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-006,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-007,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-008,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-009,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-010,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-011,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-012,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-013,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-014,NO_IMPACT,No direct Phase 2 impact identified
+DQ-002,MET-015,NO_IMPACT,No direct Phase 2 impact identified

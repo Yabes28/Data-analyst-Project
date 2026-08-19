@@ -1,0 +1,22 @@
+table,column,condition,null_count,percentage_within_condition,null_semantics,classification,metric_impact
+orders,order_approved_at,order_status=canceled,141,22.56,UNRESOLVED_NULL,UNRESOLVED,Lifecycle/delivery eligibility
+orders,order_approved_at,order_status=created,5,100.0,UNRESOLVED_NULL,UNRESOLVED,Lifecycle/delivery eligibility
+orders,order_approved_at,order_status=delivered,14,0.014511,UNEXPECTED_NULL,ANALYTICAL_EXCLUSION_CANDIDATE,Lifecycle/delivery eligibility
+orders,order_delivered_carrier_date,order_status=approved,2,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_carrier_date,order_status=canceled,550,88.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_carrier_date,order_status=created,5,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_carrier_date,order_status=delivered,2,0.002073,UNEXPECTED_NULL,ANALYTICAL_EXCLUSION_CANDIDATE,Lifecycle/delivery eligibility
+orders,order_delivered_carrier_date,order_status=invoiced,314,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_carrier_date,order_status=processing,301,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_carrier_date,order_status=unavailable,609,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_customer_date,order_status=approved,2,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_customer_date,order_status=canceled,619,99.04,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_customer_date,order_status=created,5,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_customer_date,order_status=delivered,8,0.008292,UNEXPECTED_NULL,ANALYTICAL_EXCLUSION_CANDIDATE,Lifecycle/delivery eligibility
+orders,order_delivered_customer_date,order_status=invoiced,314,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_customer_date,order_status=processing,301,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_customer_date,order_status=shipped,1107,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+orders,order_delivered_customer_date,order_status=unavailable,609,100.0,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,Lifecycle/delivery eligibility
+reviews,review_comment_title,all reviews,87656,88.34153,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,No impact on score; text analysis coverage only
+reviews,review_comment_message,all reviews,58247,58.702532,STRUCTURAL_NULL,VALID_BUSINESS_CONDITION,No impact on score; text analysis coverage only
+products,product_category_name,all products,610,1.851234,UNRESOLVED_NULL,SOURCE_DATA_LIMITATION,Category grouping coverage

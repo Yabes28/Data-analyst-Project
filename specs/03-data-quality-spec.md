@@ -1,31 +1,32 @@
 # Data Quality Specification
 
-**Status:** Draft — executable thresholds pending source profiling.
+**Status:** Phase 2 evidence complete — treatments proposed but not implemented.
 
 ## Assessment principles
 
-Raw records are never edited or automatically removed. Each observed issue must be quantified, retained in a test result, and classified as one of: **valid business condition**, **source-data limitation**, **data-quality defect**, or **analytical exclusion**. Exclusions require a stated metric/analysis impact.
+Raw records are never edited or automatically removed. Every registered condition uses exactly one controlled primary classification: `VALID_BUSINESS_CONDITION`, `SOURCE_DATA_LIMITATION`, `DATA_QUALITY_DEFECT`, `ANALYTICAL_MODELING_CONDITION`, `ANALYTICAL_EXCLUSION_CANDIDATE`, or `UNRESOLVED`. Phase 2 treatment states propose later handling but do not implement it.
 
-| ID | Test area | Required test | Initial disposition rule |
-|---|---|---|---|
-| DQ-001 | File integrity | Expected files, readable CSV structure, checksum, encoding, delimiter. | Block downstream work if structurally unreadable or missing. |
-| DQ-002 | Key uniqueness | Duplicate candidate keys for each source. | Investigate; never deduplicate without deterministic rule. |
-| DQ-003 | Critical IDs | Null/blank order, customer, product, seller, review, or payment identifiers where required by grain. | Quantify and assess referential impact. |
-| DQ-004 | Foreign keys | Unmatched orders/customers/items/products/sellers/payments/reviews/translations. | Preserve and report; exclusion depends on analytical use. |
-| DQ-005 | Timestamps | Parse failures, invalid values, and unexpected observation-window bounds. | Preserve raw value; derived time metrics require valid endpoints. |
-| DQ-006 | Chronology | Purchase, approval, carrier, delivery, and estimate chronology violations. | Classify case-by-case; exclude only from affected duration metric if justified. |
-| DQ-007 | Monetary values | Negative and zero price, freight, and payment values; nonnumeric values. | Zero may be valid; negatives require investigation. |
-| DQ-008 | Status | Unexpected, cancelled, unavailable, or inconsistent lifecycle states. | Treat status as business condition unless evidence indicates defect. |
-| DQ-009 | Delivery completeness | Missing delivery dates by status and required endpoints for lead time. | Exclude only from delivery-duration denominator; report coverage. |
-| DQ-010 | Reviews | Duplicate review IDs, multiple review/order links, missing scores, scores outside validated domain. | Establish canonical review rule before aggregation. |
-| DQ-011 | Customer identity | Relationship between order-linked customer ID and stable customer identity. | Block repeat-rate/cohort work until validated. |
-| DQ-012 | Categories | Missing source category and unmatched translation. | Retain explicit Unknown/Untranslated group when modeled. |
-| DQ-013 | Geolocation | Duplicate postal prefixes, conflicting city/state/coordinates, invalid coordinates. | Do not direct-join until normalized aggregation is specified. |
-| DQ-014 | Categorical consistency | Whitespace, casing, spelling, and unexpected domain values. | Normalize only in derived layers with documented mapping. |
-| DQ-015 | Join cardinality | Pre/post-join row counts, key multiplicity, and monetary control totals. | Any unexplained multiplication blocks release. |
-| DQ-016 | Coverage | Metric-eligible numerator/denominator records and excluded counts. | Publish coverage with affected metrics. |
+| ID | Risk/test | Observed evidence | Primary classification | Severity | Proposed handling | Owner |
+|---|---|---|---|---|---|---|
+| DQ-001 | File integrity | Nine hashes match Phase 1; no missing/extra CSVs. | Control passed; no registered issue | CRITICAL control | Hard fail on change. | Every phase |
+| DQ-002 | Candidate-key assumptions | Validated entity keys pass; review/geolocation apparent keys are non-unique. | ANALYTICAL_MODELING_CONDITION | HIGH | Preserve source grains; require model rules. | Phase 4 |
+| DQ-003 | Critical IDs | Zero null critical IDs in tested sources. | Control passed; no registered issue | CRITICAL control | Hard fail if introduced. | Every phase |
+| DQ-004 | Foreign keys | Zero child orphans across six core relationships. | Control passed; optional/reference gaps handled under DQ-012/013/016 | HIGH control | Retain relationship tests. | Phase 4/9 |
+| DQ-005 | Timestamp parsing/timezone | Zero parse failures; no timezone metadata. | SOURCE_DATA_LIMITATION | MEDIUM | Preserve source-naive timestamps and disclose. | Phase 3/6 |
+| DQ-006 | Chronology | 1,359 approval-after-carrier; 23 carrier-after-delivery; late delivery separated as business condition. | UNRESOLVED | HIGH | Potential metric-specific exclusion; no correction. | Phase 3 |
+| DQ-007 | Monetary values | No nulls/negatives/parse failures; 383 zero freight and nine zero payments. | UNRESOLVED | MEDIUM | Preserve; approve metric rules after context review. | Phase 3 |
+| DQ-008 | Status | Eight lifecycle states with different timestamps/child coverage. | VALID_BUSINESS_CONDITION | HIGH | Metric eligibility `PENDING_PHASE_3`. | Phase 3 |
+| DQ-009 | Delivery completeness | Eight delivered orders lack customer delivery; six non-delivered orders contain it. | ANALYTICAL_EXCLUSION_CANDIDATE | HIGH | Require valid endpoint/status population rule. | Phase 3 |
+| DQ-010 | Reviews | 789 review IDs span orders; 547 orders have multiple review IDs; no revision field. | UNRESOLVED | HIGH | Preserve events; canonical rule not approved. | Phase 3/4 |
+| DQ-011 | Customer identity | 99,441 customer records; 96,096 stable IDs; 2,997 stable IDs repeat; max 17. | ANALYTICAL_MODELING_CONDITION | HIGH | Use `customer_unique_id` subject to metric rules. | Phase 3 |
+| DQ-012 | Categories | 610 missing categories; two untranslated values; affected item coverage quantified. | SOURCE_DATA_LIMITATION | MEDIUM | Preserve missing/original values; model display rule later. | Phase 4 |
+| DQ-013 | Geolocation | 17,972 multi-row ZIPs; label/coordinate conflicts and coverage gaps. | ANALYTICAL_MODELING_CONDITION | HIGH | Normalize deterministically; final choice deferred. | Phase 4 |
+| DQ-014 | Categorical consistency | Source labels preserved; geographic label variation measured. | SOURCE_DATA_LIMITATION | LOW | Normalize only in derived layer with mapping. | Phase 4 |
+| DQ-015 | Item/payment fanout | Unsafe join inflates item-price control 4.544% and payment control 28.157%. | ANALYTICAL_MODELING_CONDITION | CRITICAL | Separate/pre-aggregate facts; `DEFERRED_TO_PHASE_4`. | Phase 4 |
+| DQ-016 | Related-source coverage | 775 orders lack items, one lacks payments, 768 lack reviews; no child orphans. | ANALYTICAL_EXCLUSION_CANDIDATE | MEDIUM | Metric-specific eligibility; preserve parent orders. | Phase 3 |
+| DQ-017 | 2020 shipping-limit values | Four item rows, three 2017 orders, one seller, ~1,052–1,056 day deltas. | UNRESOLVED | MEDIUM | Preserve and investigate; no inferred correction. | Phase 3/4 |
+| DQ-018 | Observation-window censoring | Purchases bounded 2016-09-04 to 2018-10-17; boundary completeness unknown. | SOURCE_DATA_LIMITATION | HIGH | Disclose window/exposure and fix recency anchor later. | Phase 3/6 |
 
 ## Output contract
 
-Phase 2 must produce a machine-readable test summary and a human-readable issue register containing test ID, table/column, observed count/rate, examples that contain no secrets, classification, decision, owner, and downstream impact. Thresholds and accepted exceptions must be approved rather than invented during implementation.
-
+Phase 2 evidence is stored under `reports/data-quality/`. `data-quality-issue-register.csv` is authoritative for classifications/treatment states; `data-quality-test-results.csv` records PASS/WARN/INFO results; and `metric-impact-matrix.csv` links issues to proposed metrics. No Phase 3 population rule or Phase 4 model decision is approved by this specification.

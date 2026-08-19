@@ -12,12 +12,13 @@ Only the approved phase may be executed. Specifications must precede implementat
 
 **Work:** Acquire original Olist files safely; create source manifest/checksums; inspect exact schemas, types, keys, grains, date range, statuses, relationships, and license.  
 **Exit criteria:** DATA-001–DATA-009 evidenced; every expected/missing file accounted for; source grains and customer identity semantics documented; no analytical transformations started; spec changes approved.
-**Status:** Complete — all nine source files, schemas, grains, keys, relationships, customer identity, fanout, source semantics, license, and metric feasibility were validated on 2026-08-19. Awaiting explicit Phase 1 approval before Phase 2.
+**Status:** Approved and complete — owner approval received 2026-08-19.
 
 ## Phase 2 — Data profiling & data quality assessment
 
 **Work:** Build reproducible profiling and DQ tests; classify anomalies; propose exclusions without silently applying them.  
 **Exit criteria:** DQ-001–DQ-016 executed where applicable; issue register has counts, rates, dispositions, and impacts; critical blockers resolved or explicitly accepted.
+**Status:** Complete — DQ-001–DQ-018 assessed, raw integrity passed, issues classified, treatments deferred to owning phases, and no cleaning was implemented. Awaiting explicit Phase 2 approval.
 
 ## Phase 3 — Metric contract validation
 

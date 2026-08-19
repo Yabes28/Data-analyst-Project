@@ -1,0 +1,22 @@
+{
+  "raw_integrity": "PASS",
+  "issues": 15,
+  "classification_breakdown": {
+    "ANALYTICAL_MODELING_CONDITION": 4,
+    "UNRESOLVED": 4,
+    "SOURCE_DATA_LIMITATION": 4,
+    "ANALYTICAL_EXCLUSION_CANDIDATE": 2,
+    "VALID_BUSINESS_CONDITION": 1
+  },
+  "severity_breakdown": {
+    "HIGH": 8,
+    "MEDIUM": 5,
+    "CRITICAL": 1,
+    "LOW": 1
+  },
+  "test_result_breakdown": {
+    "PASS": 16,
+    "WARN": 12,
+    "INFO": 4
+  }
+}

@@ -1,0 +1,33 @@
+test_id,issue_id,test_name,source_table,result,observed_value,expected_condition,severity
+T-DQ-001,DQ-001,Raw files match Phase 1 manifest,all,PASS,missing=[]; extra=[]; changed=[],"No missing, extra, or changed CSV files",CRITICAL
+T-DQ-002-customers,DQ-002,Validated key customer_id,customers,PASS,0,0 null or duplicate-key rows,CRITICAL
+T-DQ-002-orders,DQ-002,Validated key order_id,orders,PASS,0,0 null or duplicate-key rows,CRITICAL
+T-DQ-002-order_items,DQ-002,Validated key order_id+order_item_id,order_items,PASS,0,0 null or duplicate-key rows,CRITICAL
+T-DQ-002-payments,DQ-002,Validated key order_id+payment_sequential,payments,PASS,0,0 null or duplicate-key rows,CRITICAL
+T-DQ-002-products,DQ-002,Validated key product_id,products,PASS,0,0 null or duplicate-key rows,CRITICAL
+T-DQ-002-sellers,DQ-002,Validated key seller_id,sellers,PASS,0,0 null or duplicate-key rows,CRITICAL
+T-DQ-002-category_translation,DQ-002,Validated key product_category_name,category_translation,PASS,0,0 null or duplicate-key rows,CRITICAL
+T-DQ-003,DQ-003,Critical identifiers are populated,multiple,PASS,0,0 null critical identifiers,CRITICAL
+T-DQ-011,DQ-011,Customer identity grain,customers,INFO,customer_id=99441; customer_unique_id=96096; repeated_stable_ids=2997; max=17,Document order-associated and stable identity levels,HIGH
+T-DQ-004-customers-orders,DQ-004,orders foreign keys match customers,orders,PASS,0,0 unmatched child rows,HIGH
+T-DQ-004-orders-order_items,DQ-004,order_items foreign keys match orders,order_items,PASS,0,0 unmatched child rows,HIGH
+T-DQ-004-orders-payments,DQ-004,payments foreign keys match orders,payments,PASS,0,0 unmatched child rows,HIGH
+T-DQ-004-orders-reviews,DQ-004,reviews foreign keys match orders,reviews,PASS,0,0 unmatched child rows,HIGH
+T-DQ-004-products-order_items,DQ-004,order_items foreign keys match products,order_items,PASS,0,0 unmatched child rows,HIGH
+T-DQ-004-sellers-order_items,DQ-004,order_items foreign keys match sellers,order_items,PASS,0,0 unmatched child rows,HIGH
+T-DQ-016-items,DQ-016,Orders without items,orders,WARN,"rows=775; statuses={'canceled': 164, 'created': 5, 'invoiced': 2, 'shipped': 1, 'unavailable': 603}",Quantify optional relationship absence,MEDIUM
+T-DQ-016-payments,DQ-016,Orders without payments,orders,WARN,rows=1; statuses={'delivered': 1},Quantify optional relationship absence,MEDIUM
+T-DQ-016-reviews,DQ-016,Orders without reviews,orders,WARN,"rows=768; statuses={'canceled': 20, 'created': 2, 'delivered': 646, 'invoiced': 5, 'processing': 6, 'shipped': 75, 'unavailable': 14}",Quantify optional relationship absence,MEDIUM
+T-DQ-015,DQ-015,Item-payment fanout changes monetary controls,order_items; payments,WARN,multi_items=9802; multi_payments=2936; both=275; rows=117601; price_inflation=4.544062%; payment_inflation=28.15711%,Naive join must demonstrably differ and be prohibited,CRITICAL
+T-DQ-010,DQ-010,Ambiguous repeated review relationships,reviews,WARN,"{'review_rows': 99224, 'unique_review_ids': 98410, 'review_ids_with_multiple_orders': 789, 'repeated_review_ids_with_score_variation': 0, 'repeated_review_ids_with_creation_variation': 0, 'repeated_review_ids_with_answer_variation': 0, 'orders_with_multiple_review_ids': 547, 'multi_review_orders_with_score_variation': 202, 'max_reviews_per_order': 3, 'exact_duplicate_rows': 0}",Preserve and quantify without canonical deduplication,HIGH
+T-DQ-013,DQ-013,Raw geolocation ZIP multiplicity and coverage,geolocation,WARN,"{'rows': 1000163.0, 'exact_duplicate_rows': 261831.0, 'unique_zip_prefixes': 19015.0, 'single_row_prefixes': 1043.0, 'multiple_row_prefixes': 17972.0, 'max_rows_per_prefix': 1146.0, 'multi_city_prefixes': 8556.0, 'multi_state_prefixes': 8.0, 'median_lat_range': 0.014757967251422865, 'max_lat_range': 77.02570802658605, 'median_lng_range': 0.015757226352960174, 'max_lng_range': 72.55231470851325, 'customer_rows_without_coverage': 278.0, 'seller_rows_without_coverage': 7.0}",Raw observations are not a unique ZIP dimension,HIGH
+T-DQ-012,DQ-012,Category missingness and translation coverage,products; category_translation,WARN,"missing_products=610; unmatched=['pc_gamer', 'portateis_cozinha_e_preparadores_de_alimentos']; unmatched_products=13; item_rows_missing=1603; item_rows_untranslated=24",Preserve explicit missing/untranslated categories,MEDIUM
+T-DQ-005,DQ-005,Configured timestamps parse,orders; order_items,PASS,0,0 parse failures,HIGH
+T-DQ-006,DQ-006,Chronological consistency,orders,WARN,approval_after_carrier=1359; carrier_after_delivery=23; late_delivery=7827,Quantify true sequence exceptions; treat lateness as business condition,HIGH
+T-DQ-017,DQ-017,Shipping-limit dates in 2020,order_items,WARN,rows=4; orders=3; min=2020-02-03 20:23:22; max=2020-04-09 22:35:08,Quantify isolated future-bound timestamps without mutation,MEDIUM
+T-DQ-008,DQ-008,Order-status evidence matrix,orders,INFO,statuses=8,All population decisions PENDING_PHASE_3,HIGH
+T-DQ-009,DQ-009,Delivery-status/timestamp consistency,orders,WARN,delivered_missing=8; non_delivered_present=6; statuses={'canceled': 6},Preserve source status and define metric-specific handling,HIGH
+T-DQ-007,DQ-007,Monetary parse/null/zero/negative controls,order_items; payments,WARN,"negative=0; zero_price=0; zero_freight=383; zero_payment=9; zero_payment_types={'voucher': 6, 'not_defined': 3}",No mutation; classify zeros and preserve extremes,MEDIUM
+T-DQ-014,DQ-014,Categorical normalization remains unimplemented,multiple,INFO,Source labels preserved,No Phase 2 normalization,LOW
+T-DQ-018,DQ-018,Bounded purchase observation window,orders,INFO,min=2016-09-04 21:15:19; max=2018-10-17 17:30:18,Document censoring; do not compute behavior metrics,HIGH
+T-DQ-002-ambiguous,DQ-002,Non-unique review/geolocation identifiers,reviews; geolocation,WARN,review_id duplicate-key rows=1603; geolocation full duplicate rows=261831,Do not infer uniqueness,HIGH

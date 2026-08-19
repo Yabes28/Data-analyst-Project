@@ -1,0 +1,6 @@
+condition,rows,percentage_of_orders,min_violation_hours,median_violation_hours,max_violation_hours,status_distribution
+purchase_after_approval,0,0.0,,,,{}
+approval_after_carrier,1359,1.36664,0.005833333333333334,17.16777777777778,4109.256111111111,"{""delivered"": 1350, ""shipped"": 9}"
+carrier_after_customer_delivery,23,0.023129,0.3883333333333333,39.864444444444445,386.30805555555554,"{""delivered"": 23}"
+purchase_after_customer_delivery,0,0.0,,,,{}
+customer_delivery_after_estimate,7827,7.870999,0.06,139.38944444444445,4535.401944444445,"{""delivered"": 7826, ""canceled"": 1}"

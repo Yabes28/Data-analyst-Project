@@ -1,0 +1,4 @@
+table,column,rows,nulls,parse_failures,zeros,negatives,minimum,p99,maximum
+order_items,price,112650,0,0,0,0,0.85,890.0,6735.0
+order_items,freight_value,112650,0,0,383,0,0.0,84.52,409.68
+payments,payment_value,103886,0,0,9,0,0.0,1039.9164999999994,13664.08

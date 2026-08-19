@@ -1,0 +1,2 @@
+rows,exact_duplicate_rows,unique_zip_prefixes,single_row_prefixes,multiple_row_prefixes,max_rows_per_prefix,multi_city_prefixes,multi_state_prefixes,median_lat_range,max_lat_range,median_lng_range,max_lng_range,customer_rows_without_coverage,seller_rows_without_coverage
+1000163,261831,19015,1043,17972,1146,8556,8,0.014757967251422865,77.02570802658605,0.015757226352960174,72.55231470851325,278,7
