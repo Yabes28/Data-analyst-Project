@@ -1,0 +1,28 @@
+# Metric Contract
+
+**Status:** Proposed. Every metric is **Pending Validation** until Phase 1 confirms columns/grains and Phase 3 approves its executable definition.
+
+Common rules: monetary values use source currency as documented by Olist; no FX or inflation adjustment is assumed. Status names and column names below are semantic placeholders until inspected. Distinct order/customer counting occurs only at a validated grain.
+
+| ID | Metric | Business definition | Mathematical definition | Required semantic fields | Grain | Filters / null handling | Caveats | Status |
+|---|---|---|---|---|---|---|---|---|
+| MET-001 | Total Orders | Distinct orders placed in the reporting period. | `COUNT(DISTINCT order_id)` | order ID, purchase timestamp | Reporting period | Valid ID and timestamp for time trends; all statuses shown or filter disclosed. | Partial periods can distort comparisons. | Pending Validation |
+| MET-002 | Delivered Orders | Distinct orders with validated delivered status. | `COUNT(DISTINCT order_id WHERE status='delivered')` | order ID, status | Reporting period | Null/unknown statuses excluded and counted separately. | Status domain must be verified. | Pending Validation |
+| MET-003 | Product GMV | Sum of item selling prices, excluding freight. | `SUM(order_item_price)` | order ID, item key, item price | Order item then aggregate as needed | Default eligibility/status policy must be approved; null price excluded and reported. | Not revenue recognition or profit; refunds/returns may be unavailable. | Pending Validation |
+| MET-004 | Gross Order Value | Item price plus item-level freight, kept distinct from Product GMV. | `SUM(order_item_price + freight_value)` | item price, freight | Order item then aggregate | Null components handled only after profiling; eligibility disclosed. | Not payment value, revenue, or profit. | Pending Validation |
+| MET-005 | Average Order Value | Mean order-level Product GMV for eligible distinct orders. | `SUM(order-level Product GMV) / COUNT(eligible orders)` | fields for MET-003, order ID | Order then reporting group | Orders without eligible items/excluded statuses must be disclosed. | Numerator explicitly excludes freight. | Pending Validation |
+| MET-006 | Unique Customers | Count of distinct stable customer identities with eligible orders. | `COUNT(DISTINCT stable_customer_id)` | stable customer ID, order ID | Customer | Identifier semantics and order eligibility required. | Order-linked customer ID must not be assumed stable. | Pending Validation |
+| MET-007 | Repeat Customer Rate | Share of eligible customers with at least two eligible distinct orders in the observation window. | `customers(order_count>=2) / customers(order_count>=1)` | stable customer ID, order ID, purchase time/status | Customer | Null stable IDs excluded/reported; fixed observation window disclosed. | Right-censoring and historical coverage bias. | Pending Validation |
+| MET-008 | Average Delivery Lead Time | Mean elapsed time from purchase to customer delivery for eligible delivered orders. | `AVG(delivered_at - purchased_at)` | purchase and delivery timestamps, status | Order | Both timestamps valid; delivered eligibility; chronology failures excluded/reported. | Mean should be paired with median/distribution. | Pending Validation |
+| MET-009 | Late Delivery Rate | Share of eligible delivered orders delivered after estimated delivery date. | `COUNT(delivered_at > estimated_at) / COUNT(valid delivered_at & estimated_at)` | actual/estimated delivery timestamps, status | Order | Valid timestamps and delivered orders only. | Exact timestamp/date comparison convention must be approved. | Pending Validation |
+| MET-010 | Average Review Score | Mean validated review score among canonical eligible reviews. | `AVG(review_score)` | order/review IDs, review score | Canonical review/order | Null/invalid scores excluded/reported; duplicate resolution required. | Review coverage and selection bias must be disclosed. | Pending Validation |
+| MET-011 | Item Volume | Count of validated order-item rows. | `COUNT(valid order_item_key)` | order ID, item sequence/key | Order item | Duplicate/invalid item keys excluded only after disposition. | Not order volume. | Pending Validation |
+| MET-012 | Freight Value | Sum of item-level freight charges. | `SUM(freight_value)` | freight value, item key | Order item | Null/negative policy pending profiling. | Not logistics cost or profit impact. | Pending Validation |
+| MET-013 | Freight Burden | Freight value relative to gross order value. | `SUM(freight) / SUM(item price + freight)` | item price, freight | Aggregated item set | Denominator > 0; weighted ratio, not mean of row ratios. | Alternative denominator requires contract change. | Pending Validation |
+| MET-014 | Payment Value | Sum of validated payment records at payment grain. | `SUM(payment_value)` | order ID, payment sequence, value | Payment record then order | Duplicate/payment-status semantics pending. | Must never be multiplied through item joins; may not reconcile to item values. | Pending Validation |
+| MET-015 | On-time Delivery Rate | Complement of late delivery among the same eligible records. | `1 - MET-009` | MET-009 fields | Order | Same denominator as MET-009. | Do not compute with a different eligibility set. | Pending Validation |
+
+## Contract approval checklist
+
+For each metric, Phase 3 must replace semantic placeholders with exact fields, approve eligible statuses/date logic, document the reporting date attribution, test null behavior, define aggregation behavior, reconcile a control total, and change status to **Validated** only with evidence.
+

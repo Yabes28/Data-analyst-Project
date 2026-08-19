@@ -1,0 +1,27 @@
+# Acceptance Criteria
+
+**Status:** Draft. Phase-specific gates are also defined in `tasks/roadmap.md`.
+
+| ID | Acceptance criterion | Evidence required |
+|---|---|---|
+| AC-001 | Required original files are inventoried and checksummed without committing raw data. | Source manifest and clean Git status for data. |
+| AC-002 | Exact source schema, grain, logical keys, and relationships are documented. | Validated data dictionary/schema spec. |
+| AC-003 | Data-quality tests cover specified risks and issues receive documented dispositions. | Executed test report and issue register. |
+| AC-004 | Each published KPI has a validated contract with exact columns, grain, filters, null logic, and caveats. | Approved metric contract and tests. |
+| AC-005 | No join produces unexplained row multiplication or monetary double counting. | Cardinality and pre/post-join reconciliations. |
+| AC-006 | Analytical tables have documented grain, keys, lineage, transformation, and use. | Model spec, diagram, build SQL/code. |
+| AC-007 | Major analyses trace to requirement and metric IDs and are reproducible. | SQL/notebooks with lineage headers. |
+| AC-008 | SQL demonstrates correct, readable analyst-level techniques appropriate to the question. | Reviewed SQL and validation queries. |
+| AC-009 | Python outputs rerun from documented dependencies and paths without editing raw inputs. | Successful clean-run record. |
+| AC-010 | Dashboard measures and filters reconcile with approved analytical outputs. | Reconciliation workbook/query results. |
+| AC-011 | Findings distinguish evidence, interpretation, assumptions, and limitations; no causal overclaiming. | Reviewed findings report. |
+| AC-012 | Recommendations cite quantitative evidence and identify an owner/action or testable next step. | Executive summary traceability. |
+| AC-013 | Profit/margin terminology is absent unless future validated cost data and an approved spec change support it. | Repository content review. |
+| AC-014 | No credentials, secrets, or personal tokens are tracked. | Secret scan/manual review. |
+| AC-015 | README is accurate, navigable, and contains no placeholder findings represented as facts. | Final portfolio review. |
+| AC-016 | Specifications, code, docs, and dashboard definitions are synchronized; drift is resolved through approval. | Decision log and final audit. |
+
+## Phase 0 acceptance
+
+Phase 0 is accepted only when the repository foundation exists, the charter/business requirements/metric proposals/acquisition guidance/roadmap are reviewable, all unvalidated claims are labeled, no source data or findings were fabricated, and the owner explicitly approves continuation.
+
