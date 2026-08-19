@@ -1,0 +1,121 @@
+metric_id,order_status,decision,rationale,required_fields,caveat
+MET-001,created,INCLUDE,All observed statuses; valid non-null order_id and purchase timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-001,approved,INCLUDE,All observed statuses; valid non-null order_id and purchase timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-001,invoiced,INCLUDE,All observed statuses; valid non-null order_id and purchase timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-001,processing,INCLUDE,All observed statuses; valid non-null order_id and purchase timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-001,shipped,INCLUDE,All observed statuses; valid non-null order_id and purchase timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-001,delivered,INCLUDE,All observed statuses; valid non-null order_id and purchase timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-001,canceled,INCLUDE,All observed statuses; valid non-null order_id and purchase timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-001,unavailable,INCLUDE,All observed statuses; valid non-null order_id and purchase timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-002,created,EXCLUDE,Include delivered only; do not require customer-delivery timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-002,approved,EXCLUDE,Include delivered only; do not require customer-delivery timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-002,invoiced,EXCLUDE,Include delivered only; do not require customer-delivery timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-002,processing,EXCLUDE,Include delivered only; do not require customer-delivery timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-002,shipped,EXCLUDE,Include delivered only; do not require customer-delivery timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-002,delivered,INCLUDE,Include delivered only; do not require customer-delivery timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-002,canceled,EXCLUDE,Include delivered only; do not require customer-delivery timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-002,unavailable,EXCLUDE,Include delivered only; do not require customer-delivery timestamp.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-003,created,EXCLUDE,"Include approved, invoiced, processing, shipped, delivered orders with item rows; exclude created, canceled, unavailable.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-003,approved,INCLUDE,"Include approved, invoiced, processing, shipped, delivered orders with item rows; exclude created, canceled, unavailable.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-003,invoiced,INCLUDE,"Include approved, invoiced, processing, shipped, delivered orders with item rows; exclude created, canceled, unavailable.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-003,processing,INCLUDE,"Include approved, invoiced, processing, shipped, delivered orders with item rows; exclude created, canceled, unavailable.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-003,shipped,INCLUDE,"Include approved, invoiced, processing, shipped, delivered orders with item rows; exclude created, canceled, unavailable.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-003,delivered,INCLUDE,"Include approved, invoiced, processing, shipped, delivered orders with item rows; exclude created, canceled, unavailable.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-003,canceled,EXCLUDE,"Include approved, invoiced, processing, shipped, delivered orders with item rows; exclude created, canceled, unavailable.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-003,unavailable,EXCLUDE,"Include approved, invoiced, processing, shipped, delivered orders with item rows; exclude created, canceled, unavailable.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-004,created,EXCLUDE,Same as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-004,approved,INCLUDE,Same as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-004,invoiced,INCLUDE,Same as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-004,processing,INCLUDE,Same as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-004,shipped,INCLUDE,Same as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-004,delivered,INCLUDE,Same as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-004,canceled,EXCLUDE,Same as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-004,unavailable,EXCLUDE,Same as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-005,created,EXCLUDE,Same statuses as MET-003; denominator includes only eligible orders with at least one eligible item.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-005,approved,INCLUDE,Same statuses as MET-003; denominator includes only eligible orders with at least one eligible item.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-005,invoiced,INCLUDE,Same statuses as MET-003; denominator includes only eligible orders with at least one eligible item.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-005,processing,INCLUDE,Same statuses as MET-003; denominator includes only eligible orders with at least one eligible item.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-005,shipped,INCLUDE,Same statuses as MET-003; denominator includes only eligible orders with at least one eligible item.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-005,delivered,INCLUDE,Same statuses as MET-003; denominator includes only eligible orders with at least one eligible item.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-005,canceled,EXCLUDE,Same statuses as MET-003; denominator includes only eligible orders with at least one eligible item.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-005,unavailable,EXCLUDE,Same statuses as MET-003; denominator includes only eligible orders with at least one eligible item.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-006,created,EXCLUDE,"Approved, invoiced, processing, shipped, delivered orders; valid customer mapping.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-006,approved,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders; valid customer mapping.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-006,invoiced,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders; valid customer mapping.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-006,processing,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders; valid customer mapping.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-006,shipped,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders; valid customer mapping.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-006,delivered,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders; valid customer mapping.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-006,canceled,EXCLUDE,"Approved, invoiced, processing, shipped, delivered orders; valid customer mapping.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-006,unavailable,EXCLUDE,"Approved, invoiced, processing, shipped, delivered orders; valid customer mapping.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-007,created,EXCLUDE,"Approved, invoiced, processing, shipped, delivered orders within one explicitly declared window.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-007,approved,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders within one explicitly declared window.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-007,invoiced,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders within one explicitly declared window.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-007,processing,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders within one explicitly declared window.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-007,shipped,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders within one explicitly declared window.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-007,delivered,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders within one explicitly declared window.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-007,canceled,EXCLUDE,"Approved, invoiced, processing, shipped, delivered orders within one explicitly declared window.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-007,unavailable,EXCLUDE,"Approved, invoiced, processing, shipped, delivered orders within one explicitly declared window.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-008,created,EXCLUDE,Status delivered; purchase and customer-delivery timestamps non-null; delivery >= purchase.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-008,approved,EXCLUDE,Status delivered; purchase and customer-delivery timestamps non-null; delivery >= purchase.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-008,invoiced,EXCLUDE,Status delivered; purchase and customer-delivery timestamps non-null; delivery >= purchase.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-008,processing,EXCLUDE,Status delivered; purchase and customer-delivery timestamps non-null; delivery >= purchase.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-008,shipped,EXCLUDE,Status delivered; purchase and customer-delivery timestamps non-null; delivery >= purchase.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-008,delivered,INCLUDE,Status delivered; purchase and customer-delivery timestamps non-null; delivery >= purchase.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-008,canceled,EXCLUDE,Status delivered; purchase and customer-delivery timestamps non-null; delivery >= purchase.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-008,unavailable,EXCLUDE,Status delivered; purchase and customer-delivery timestamps non-null; delivery >= purchase.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-009,created,EXCLUDE,"Status delivered; valid purchase, actual-delivery, and estimated-delivery timestamps; actual >= purchase.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-009,approved,EXCLUDE,"Status delivered; valid purchase, actual-delivery, and estimated-delivery timestamps; actual >= purchase.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-009,invoiced,EXCLUDE,"Status delivered; valid purchase, actual-delivery, and estimated-delivery timestamps; actual >= purchase.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-009,processing,EXCLUDE,"Status delivered; valid purchase, actual-delivery, and estimated-delivery timestamps; actual >= purchase.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-009,shipped,EXCLUDE,"Status delivered; valid purchase, actual-delivery, and estimated-delivery timestamps; actual >= purchase.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-009,delivered,INCLUDE,"Status delivered; valid purchase, actual-delivery, and estimated-delivery timestamps; actual >= purchase.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-009,canceled,EXCLUDE,"Status delivered; valid purchase, actual-delivery, and estimated-delivery timestamps; actual >= purchase.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-009,unavailable,EXCLUDE,"Status delivered; valid purchase, actual-delivery, and estimated-delivery timestamps; actual >= purchase.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-010,created,INCLUDE,All order statuses with >=1 matched review row and valid score 1–5.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-010,approved,INCLUDE,All order statuses with >=1 matched review row and valid score 1–5.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-010,invoiced,INCLUDE,All order statuses with >=1 matched review row and valid score 1–5.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-010,processing,INCLUDE,All order statuses with >=1 matched review row and valid score 1–5.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-010,shipped,INCLUDE,All order statuses with >=1 matched review row and valid score 1–5.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-010,delivered,INCLUDE,All order statuses with >=1 matched review row and valid score 1–5.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-010,canceled,INCLUDE,All order statuses with >=1 matched review row and valid score 1–5.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-010,unavailable,INCLUDE,All order statuses with >=1 matched review row and valid score 1–5.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-011,created,EXCLUDE,"Approved, invoiced, processing, shipped, delivered orders with valid item key.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-011,approved,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders with valid item key.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-011,invoiced,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders with valid item key.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-011,processing,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders with valid item key.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-011,shipped,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders with valid item key.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-011,delivered,INCLUDE,"Approved, invoiced, processing, shipped, delivered orders with valid item key.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-011,canceled,EXCLUDE,"Approved, invoiced, processing, shipped, delivered orders with valid item key.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-011,unavailable,EXCLUDE,"Approved, invoiced, processing, shipped, delivered orders with valid item key.",See metric decision register,Metric-specific rule; never reuse as global filter
+MET-012,created,EXCLUDE,Same statuses and item population as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-012,approved,INCLUDE,Same statuses and item population as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-012,invoiced,INCLUDE,Same statuses and item population as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-012,processing,INCLUDE,Same statuses and item population as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-012,shipped,INCLUDE,Same statuses and item population as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-012,delivered,INCLUDE,Same statuses and item population as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-012,canceled,EXCLUDE,Same statuses and item population as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-012,unavailable,EXCLUDE,Same statuses and item population as MET-003.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-013,created,EXCLUDE,Same as MET-003; aggregate components before division.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-013,approved,INCLUDE,Same as MET-003; aggregate components before division.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-013,invoiced,INCLUDE,Same as MET-003; aggregate components before division.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-013,processing,INCLUDE,Same as MET-003; aggregate components before division.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-013,shipped,INCLUDE,Same as MET-003; aggregate components before division.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-013,delivered,INCLUDE,Same as MET-003; aggregate components before division.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-013,canceled,EXCLUDE,Same as MET-003; aggregate components before division.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-013,unavailable,EXCLUDE,Same as MET-003; aggregate components before division.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-014,created,INCLUDE,All statuses with valid payment rows; missing-payment orders absent and coverage disclosed.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-014,approved,INCLUDE,All statuses with valid payment rows; missing-payment orders absent and coverage disclosed.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-014,invoiced,INCLUDE,All statuses with valid payment rows; missing-payment orders absent and coverage disclosed.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-014,processing,INCLUDE,All statuses with valid payment rows; missing-payment orders absent and coverage disclosed.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-014,shipped,INCLUDE,All statuses with valid payment rows; missing-payment orders absent and coverage disclosed.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-014,delivered,INCLUDE,All statuses with valid payment rows; missing-payment orders absent and coverage disclosed.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-014,canceled,INCLUDE,All statuses with valid payment rows; missing-payment orders absent and coverage disclosed.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-014,unavailable,INCLUDE,All statuses with valid payment rows; missing-payment orders absent and coverage disclosed.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-015,created,EXCLUDE,Exactly the same denominator population as MET-009.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-015,approved,EXCLUDE,Exactly the same denominator population as MET-009.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-015,invoiced,EXCLUDE,Exactly the same denominator population as MET-009.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-015,processing,EXCLUDE,Exactly the same denominator population as MET-009.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-015,shipped,EXCLUDE,Exactly the same denominator population as MET-009.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-015,delivered,INCLUDE,Exactly the same denominator population as MET-009.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-015,canceled,EXCLUDE,Exactly the same denominator population as MET-009.,See metric decision register,Metric-specific rule; never reuse as global filter
+MET-015,unavailable,EXCLUDE,Exactly the same denominator population as MET-009.,See metric decision register,Metric-specific rule; never reuse as global filter

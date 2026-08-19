@@ -1,0 +1,16 @@
+metric_id,source_grain,calculation_grain,reporting_grain,required_pre_aggregation,fanout_risk,safe_join_requirements
+MET-001,order,order,selected reporting dimension/time period,No beyond reporting aggregation,Controlled,MODEL-001; PENDING_PHASE_4 implementation
+MET-002,order,order,selected reporting dimension/time period,No beyond reporting aggregation,Controlled,MODEL-001
+MET-003,order item,order item,selected reporting dimension/time period,No beyond reporting aggregation,CRITICAL item/payment,MODEL-002; independent item fact
+MET-004,order item,order item,selected reporting dimension/time period,No beyond reporting aggregation,CRITICAL item/payment,MODEL-002
+MET-005,"items pre-aggregated to order, then reporting group",order after item aggregation,selected reporting dimension/time period,Yes,CRITICAL item/payment,MODEL-001 + MODEL-002 with item-to-order pre-aggregation
+MET-006,stable customer,stable customer,selected reporting dimension/time period,No beyond reporting aggregation,Controlled,MODEL-001 + MODEL-005
+MET-007,stable customer over fixed window,stable customer over window,selected reporting dimension/time period,Yes,Controlled,MODEL-001 + MODEL-005; window parameter
+MET-008,order,order,selected reporting dimension/time period,No beyond reporting aggregation,Controlled,MODEL-001 with endpoint eligibility flag
+MET-009,order,order,selected reporting dimension/time period,No beyond reporting aggregation,Controlled,MODEL-001 with shared MET-009/015 eligibility flag
+MET-010,"review events aggregated to order, then reporting group",order after review-event aggregation,selected reporting dimension/time period,Yes,Controlled,MODEL-004 order-review aggregate preserving event counts
+MET-011,order item,order item,selected reporting dimension/time period,No beyond reporting aggregation,Controlled,MODEL-002
+MET-012,order item,order item,selected reporting dimension/time period,No beyond reporting aggregation,CRITICAL item/payment,MODEL-002
+MET-013,order item aggregated to reporting group,reporting group after item aggregation,selected reporting dimension/time period,Yes,CRITICAL item/payment,MODEL-002
+MET-014,payment sequence,payment sequence,selected reporting dimension/time period,No beyond reporting aggregation,CRITICAL item/payment,MODEL-003 independent payment fact/aggregate
+MET-015,order,order,selected reporting dimension/time period,No beyond reporting aggregation,Controlled,MODEL-001 shared eligibility flag

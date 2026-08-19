@@ -1,0 +1,53 @@
+test_id,metric_id,test_name,result,expected_status,evidence
+MCT-001,MET-001,Required source columns exist,PASS,PASS,all present
+MCT-002,MET-001,Final status assigned,PASS,PASS,APPROVED
+MCT-003,MET-001,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-004,MET-002,Required source columns exist,PASS,PASS,all present
+MCT-005,MET-002,Final status assigned,PASS,PASS,APPROVED
+MCT-006,MET-002,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-007,MET-003,Required source columns exist,PASS,PASS,all present
+MCT-008,MET-003,Final status assigned,PASS,PASS,APPROVED_WITH_LIMITATION
+MCT-009,MET-003,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-010,MET-004,Required source columns exist,PASS,PASS,all present
+MCT-011,MET-004,Final status assigned,PASS,PASS,APPROVED_WITH_LIMITATION
+MCT-012,MET-004,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-013,MET-005,Required source columns exist,PASS,PASS,all present
+MCT-014,MET-005,Final status assigned,PASS,PASS,APPROVED_WITH_LIMITATION
+MCT-015,MET-005,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-016,MET-006,Required source columns exist,PASS,PASS,all present
+MCT-017,MET-006,Final status assigned,PASS,PASS,APPROVED_WITH_LIMITATION
+MCT-018,MET-006,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-019,MET-007,Required source columns exist,PASS,PASS,all present
+MCT-020,MET-007,Final status assigned,PASS,PASS,APPROVED_WITH_LIMITATION
+MCT-021,MET-007,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-022,MET-008,Required source columns exist,PASS,PASS,all present
+MCT-023,MET-008,Final status assigned,PASS,PASS,APPROVED
+MCT-024,MET-008,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-025,MET-009,Required source columns exist,PASS,PASS,all present
+MCT-026,MET-009,Final status assigned,PASS,PASS,APPROVED
+MCT-027,MET-009,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-028,MET-010,Required source columns exist,PASS,PASS,all present
+MCT-029,MET-010,Final status assigned,PASS,PASS,APPROVED_WITH_LIMITATION
+MCT-030,MET-010,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-031,MET-011,Required source columns exist,PASS,PASS,all present
+MCT-032,MET-011,Final status assigned,PASS,PASS,APPROVED
+MCT-033,MET-011,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-034,MET-012,Required source columns exist,PASS,PASS,all present
+MCT-035,MET-012,Final status assigned,PASS,PASS,APPROVED_WITH_LIMITATION
+MCT-036,MET-012,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-037,MET-013,Required source columns exist,PASS,PASS,all present
+MCT-038,MET-013,Final status assigned,PASS,PASS,APPROVED_WITH_LIMITATION
+MCT-039,MET-013,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-040,MET-014,Required source columns exist,PASS,PASS,all present
+MCT-041,MET-014,Final status assigned,PASS,PASS,APPROVED_WITH_LIMITATION
+MCT-042,MET-014,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-043,MET-015,Required source columns exist,PASS,PASS,all present
+MCT-044,MET-015,Final status assigned,PASS,PASS,APPROVED
+MCT-045,MET-015,Population/date/grain/reconciliation defined,PASS,PASS,contract fields populated
+MCT-046,MET-003,Product GMV excludes freight and payment,PASS,PASS,SUM(order_items.price)
+MCT-047,MET-006,Stable customer identity used,PASS,PASS,customer_unique_id
+MCT-048,MET-007,Repeat metric is observational,PASS,PASS,Observed Repeat Customer Rate
+MCT-049,MET-009,Late-delivery denominator explicit,PASS,PASS,COUNT(eligible delivered order_id with both endpoints)
+MCT-050,MET-010,Review policy uses order-level mean,WARN,WARN,Order-level mean is an analytical construction; repeated relationship semantics/revision history are unavailable.
+MCT-051,MET-014,Payment fact independent of item fact,PASS,PASS,Independent payment-grain sum under identical order/date filter; exact equality within 0.01; never reconcile through item join.
+MCT-052,ALL,Forbidden overclaiming terminology absent,PASS,PASS,none

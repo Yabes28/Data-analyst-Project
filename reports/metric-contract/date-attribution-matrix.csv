@@ -1,0 +1,16 @@
+metric_id,primary_reporting_date,reason,fallback_allowed,fallback_policy,missing_date_treatment,temporal_DQ_dependencies
+MET-001,order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-002,order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-003,parent order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-004,parent order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-005,order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-006,order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-007,order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-008,purchase-cohort attribution using order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-009,purchase-cohort attribution using order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-010,parent order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-011,parent order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-012,parent order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-013,parent order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-014,parent order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable
+MET-015,purchase-cohort attribution using order_purchase_timestamp,Consistent purchase-cohort attribution for source orders and derived events,NO,None,Metric-ineligible and coverage warning,DQ-005; DQ-006; DQ-009 as applicable

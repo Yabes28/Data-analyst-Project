@@ -20,8 +20,15 @@
 | AC-014 | No credentials, secrets, or personal tokens are tracked. | Secret scan/manual review. |
 | AC-015 | README is accurate, navigable, and contains no placeholder findings represented as facts. | Final portfolio review. |
 | AC-016 | Specifications, code, docs, and dashboard definitions are synchronized; drift is resolved through approval. | Decision log and final audit. |
+| AC-017 | Product GMV uses only eligible item `price`, excludes freight/payment value, and is never labeled revenue or profit. | Metric-contract and executable semantic test. |
+| AC-018 | Customer metrics use `customer_unique_id`; repeat behavior is labeled observed-window behavior rather than retention. | Metric-contract identity/window tests. |
+| AC-019 | Delivery metrics require explicit source endpoints and metric-specific missing/chronology handling. | Eligibility and date-attribution matrices. |
+| AC-020 | Late and on-time delivery share one explicit endpoint-complete denominator and complementary equality semantics. | MET-009/MET-015 reconciliation test. |
+| AC-021 | Average Review Score follows the approved order-level mean policy and reports review coverage/limitations. | Review-policy and model reconciliation. |
+| AC-022 | Item and payment monetary measures never pass through an unsafe fact-to-fact join. | Safe-join tests and independent source controls. |
+| AC-023 | Raw geolocation is not directly joined to fact metrics; entity geography semantics are labeled. | Model relationship and row-count tests. |
+| AC-024 | Every implemented metric reconciles to an independent native-grain control within its approved tolerance. | Reconciliation results. |
 
 ## Phase 0 acceptance
 
 Phase 0 is accepted only when the repository foundation exists, the charter/business requirements/metric proposals/acquisition guidance/roadmap are reviewable, all unvalidated claims are labeled, no source data or findings were fabricated, and the owner explicitly approves continuation.
-

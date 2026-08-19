@@ -18,12 +18,13 @@ Only the approved phase may be executed. Specifications must precede implementat
 
 **Work:** Build reproducible profiling and DQ tests; classify anomalies; propose exclusions without silently applying them.  
 **Exit criteria:** DQ-001–DQ-016 executed where applicable; issue register has counts, rates, dispositions, and impacts; critical blockers resolved or explicitly accepted.
-**Status:** Complete — DQ-001–DQ-018 assessed, raw integrity passed, issues classified, treatments deferred to owning phases, and no cleaning was implemented. Awaiting explicit Phase 2 approval.
+**Status:** Approved and complete — owner approval received 2026-08-19.
 
 ## Phase 3 — Metric contract validation
 
 **Work:** Replace semantic placeholders with exact fields; approve populations, date logic, aggregation, null behavior, and caveats; test metrics on source data.  
 **Exit criteria:** Each used metric is marked Validated with test evidence and approved definitions; rejected/deferred metrics documented; control totals recorded.
+**Status:** Complete — MET-001–MET-015 have final semantic statuses, populations, dates, grains, DQ rules, safe joins, reconciliation controls, tests, and traceability. Awaiting explicit Phase 3 approval.
 
 ## Phase 4 — Analytical data modeling
 
