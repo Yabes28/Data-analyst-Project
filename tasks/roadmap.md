@@ -24,12 +24,13 @@ Only the approved phase may be executed. Specifications must precede implementat
 
 **Work:** Replace semantic placeholders with exact fields; approve populations, date logic, aggregation, null behavior, and caveats; test metrics on source data.  
 **Exit criteria:** Each used metric is marked Validated with test evidence and approved definitions; rejected/deferred metrics documented; control totals recorded.
-**Status:** Complete — MET-001–MET-015 have final semantic statuses, populations, dates, grains, DQ rules, safe joins, reconciliation controls, tests, and traceability. Awaiting explicit Phase 3 approval.
+**Status:** Approved and complete — owner approval received 2026-08-19.
 
 ## Phase 4 — Analytical data modeling
 
 **Work:** Justify and implement the lightweight dimensional model; create grain-safe staging/marts and lineage.  
 **Exit criteria:** MODEL requirements approved; table grains/keys/lineage documented; joins pass cardinality, referential, row-count, and monetary reconciliation tests.
+**Status:** Complete — DuckDB analytical model, native facts, dimensions, safe aggregates, order mart, lineage, metric support, and hard reconciliation/fanout tests implemented. Awaiting explicit Phase 4 approval.
 
 ## Phase 5 — SQL analysis
 

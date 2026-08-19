@@ -1,0 +1,24 @@
+CREATE OR REPLACE TABLE fact_orders AS
+SELECT o.*, c.customer_unique_id, c.customer_zip_code_prefix, c.customer_city, c.customer_state,
+ o.order_status IN ('approved','invoiced','processing','shipped','delivered') AS is_commercially_eligible,
+ o.order_status='delivered' AS is_delivered_status,
+ o.order_purchase_timestamp IS NOT NULL AND o.order_delivered_customer_date IS NOT NULL AS has_delivery_endpoints,
+ o.order_status='delivered' AND o.order_purchase_timestamp IS NOT NULL AND o.order_delivered_customer_date IS NOT NULL AND o.order_delivered_customer_date>=o.order_purchase_timestamp AS is_delivery_metric_eligible,
+ CASE WHEN o.order_status='delivered' AND o.order_delivered_customer_date IS NOT NULL AND o.order_estimated_delivery_date IS NOT NULL AND o.order_delivered_customer_date>=o.order_purchase_timestamp THEN o.order_delivered_customer_date>o.order_estimated_delivery_date END AS is_late_delivery,
+ CASE WHEN o.order_status='delivered' AND o.order_delivered_customer_date IS NOT NULL AND o.order_estimated_delivery_date IS NOT NULL AND o.order_delivered_customer_date>=o.order_purchase_timestamp THEN o.order_delivered_customer_date<=o.order_estimated_delivery_date END AS is_on_time_delivery,
+ CASE WHEN o.order_status='delivered' AND o.order_delivered_customer_date>=o.order_purchase_timestamp THEN date_diff('second',o.order_purchase_timestamp,o.order_delivered_customer_date)/86400.0 END AS delivery_lead_time_days
+FROM stg_orders o JOIN stg_customers c USING(customer_id);
+CREATE OR REPLACE TABLE fact_order_items AS SELECT i.*, o.order_purchase_timestamp, o.order_status, o.order_status IN ('approved','invoiced','processing','shipped','delivered') is_commercially_eligible FROM stg_order_items i JOIN stg_orders o USING(order_id);
+CREATE OR REPLACE TABLE fact_payments AS SELECT p.*, o.order_purchase_timestamp, o.order_status FROM stg_payments p JOIN stg_orders o USING(order_id);
+CREATE OR REPLACE TABLE fact_review_events AS SELECT * FROM stg_reviews;
+CREATE OR REPLACE TABLE fact_order_reviews AS SELECT order_id, COUNT(*) review_event_count, AVG(review_score)::DOUBLE mean_review_score, MIN(review_score) minimum_review_score, MAX(review_score) maximum_review_score, COUNT(DISTINCT review_score)>1 score_variation_flag, MIN(review_creation_date) first_review_creation_date, MAX(review_answer_timestamp) last_review_answer_timestamp FROM fact_review_events GROUP BY order_id;
+CREATE OR REPLACE TABLE dim_customer_identity AS SELECT customer_unique_id, COUNT(*) order_associated_customer_record_count FROM stg_customers GROUP BY customer_unique_id;
+CREATE OR REPLACE TABLE dim_products AS SELECT p.*, t.product_category_name_english,
+ CASE WHEN p.product_category_name IS NULL THEN 'Unknown Category' WHEN t.product_category_name_english IS NULL THEN p.product_category_name ELSE t.product_category_name_english END approved_display_category,
+ CASE WHEN p.product_category_name IS NULL THEN 'MISSING_SOURCE_CATEGORY' WHEN t.product_category_name_english IS NULL THEN 'UNTRANSLATED' ELSE 'TRANSLATED' END category_translation_status
+FROM stg_products p LEFT JOIN stg_category_translation t USING(product_category_name);
+CREATE OR REPLACE TABLE dim_sellers AS SELECT * FROM stg_sellers;
+CREATE OR REPLACE TABLE dim_date AS SELECT d::DATE date, year(d) calendar_year, quarter(d) calendar_quarter, month(d) month_number, monthname(d) month_name, strftime(d,'%Y-%m') year_month, week(d) week_number, day(d) day_of_month, dayname(d) weekday_name, dayofweek(d) IN (0,6) is_weekend FROM generate_series((SELECT min(order_purchase_timestamp)::DATE FROM stg_orders),(SELECT greatest(max(order_estimated_delivery_date),max(order_delivered_customer_date))::DATE FROM stg_orders),INTERVAL 1 DAY) t(d);
+CREATE OR REPLACE TABLE agg_order_items AS SELECT order_id, COUNT(*) item_count, SUM(price) product_gmv, SUM(freight_value) freight_value, SUM(price+freight_value) gross_order_value, COUNT(DISTINCT product_id) distinct_products, COUNT(DISTINCT seller_id) distinct_sellers FROM fact_order_items GROUP BY order_id;
+CREATE OR REPLACE TABLE agg_order_payments AS SELECT order_id, COUNT(*) payment_record_count, SUM(payment_value) recorded_payment_value, COUNT(DISTINCT payment_type) payment_type_count, MAX(payment_installments) maximum_installments FROM fact_payments GROUP BY order_id;
+CREATE OR REPLACE TABLE mart_order_analytics AS SELECT o.*, i.item_count, i.product_gmv, i.freight_value, i.gross_order_value, i.distinct_products, i.distinct_sellers, p.payment_record_count, p.recorded_payment_value, p.payment_type_count, p.maximum_installments, r.review_event_count, r.mean_review_score, r.minimum_review_score, r.maximum_review_score, r.score_variation_flag, i.order_id IS NOT NULL has_items, p.order_id IS NOT NULL has_payment, r.order_id IS NOT NULL has_review FROM fact_orders o LEFT JOIN agg_order_items i USING(order_id) LEFT JOIN agg_order_payments p USING(order_id) LEFT JOIN fact_order_reviews r USING(order_id);

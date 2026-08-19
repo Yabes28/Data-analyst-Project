@@ -28,6 +28,12 @@
 | AC-022 | Item and payment monetary measures never pass through an unsafe fact-to-fact join. | Safe-join tests and independent source controls. |
 | AC-023 | Raw geolocation is not directly joined to fact metrics; entity geography semantics are labeled. | Model relationship and row-count tests. |
 | AC-024 | Every implemented metric reconciles to an independent native-grain control within its approved tolerance. | Reconciliation results. |
+| AC-025 | Facts preserve order, item, payment-sequence, and review-event grains with unique/non-null keys where specified. | MODEL-KEY/ROW tests. |
+| AC-026 | Order mart joins only independently aggregated child models and passes monetary fanout regression. | MODEL-FANOUT tests. |
+| AC-027 | Stable customer dimension contains one row per `customer_unique_id` and no arbitrary permanent geography. | MODEL-006 validation/schema review. |
+| AC-028 | Product left join preserves every product and implements approved missing/untranslated category policy. | MODEL-007 row/key tests. |
+| AC-029 | Raw geolocation is absent from the current analytical model. | MODEL-GEO-001. |
+| AC-030 | Model rebuild is deterministic and completes with zero hard validation failures. | Two-run build and model validation results. |
 
 ## Phase 0 acceptance
 

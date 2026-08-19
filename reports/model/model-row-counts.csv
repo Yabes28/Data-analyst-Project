@@ -1,0 +1,13 @@
+model_name,row_count
+fact_orders,99441
+fact_order_items,112650
+fact_payments,103886
+fact_review_events,99224
+fact_order_reviews,98673
+dim_customer_identity,96096
+dim_products,32951
+dim_sellers,3095
+dim_date,800
+agg_order_items,98666
+agg_order_payments,99440
+mart_order_analytics,99441

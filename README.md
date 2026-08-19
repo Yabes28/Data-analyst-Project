@@ -1,6 +1,6 @@
 # Olist E-Commerce Performance & Customer Experience Analytics
 
-> **Status: In development — Phase 3 metric contract complete, awaiting approval.** No business KPI results, analytical models, findings, recommendations, or dashboard claims are published yet.
+> **Status: In development — Phase 4 analytical model complete, awaiting approval.** No business analysis, findings, recommendations, or dashboard claims are published yet.
 
 An end-to-end, specification-driven analytics portfolio project using the **Brazilian E-Commerce Public Dataset by Olist**. The project is designed to demonstrate defensible business analysis, relational data modeling, data-quality assessment, SQL, Python, and Power BI delivery without overstating what the source data can support.
 

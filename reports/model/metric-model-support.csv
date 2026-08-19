@@ -1,0 +1,16 @@
+metric_id,support_status,supporting_models,notes
+MET-001,SUPPORTED,MODEL-001;MODEL-009;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-002,SUPPORTED,MODEL-001;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-003,SUPPORTED_WITH_LIMITATION,MODEL-002;MODEL-007;MODEL-010;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-004,SUPPORTED_WITH_LIMITATION,MODEL-002;MODEL-010;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-005,SUPPORTED_WITH_LIMITATION,MODEL-002;MODEL-010;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-006,SUPPORTED_WITH_LIMITATION,MODEL-001;MODEL-006;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-007,SUPPORTED_WITH_LIMITATION,MODEL-001;MODEL-006,Inherits Phase 3 semantic status; model fields/grain available
+MET-008,SUPPORTED,MODEL-001;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-009,SUPPORTED,MODEL-001;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-010,SUPPORTED_WITH_LIMITATION,MODEL-004;MODEL-005;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-011,SUPPORTED,MODEL-002;MODEL-010,Inherits Phase 3 semantic status; model fields/grain available
+MET-012,SUPPORTED_WITH_LIMITATION,MODEL-002;MODEL-010;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-013,SUPPORTED_WITH_LIMITATION,MODEL-002;MODEL-010;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-014,SUPPORTED_WITH_LIMITATION,MODEL-003;MODEL-011;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available
+MET-015,SUPPORTED,MODEL-001;MODEL-012,Inherits Phase 3 semantic status; model fields/grain available

@@ -1,0 +1,13 @@
+model_id,model_name,source,grain,primary_key,dependent_models,supported_metrics
+MODEL-001,fact_orders,orders + customers,one row per order,order_id,,MET-001;MET-002;MET-006;MET-007;MET-008;MET-009;MET-015
+MODEL-002,fact_order_items,order_items + orders,one row per order item,order_id + order_item_id,,MET-003;MET-004;MET-005;MET-011;MET-012;MET-013
+MODEL-003,fact_payments,payments + orders,one row per payment sequence,order_id + payment_sequential,,MET-014
+MODEL-004,fact_review_events,reviews,one source review row,source row,,MET-010
+MODEL-005,fact_order_reviews,fact_review_events,one row per reviewed order,order_id,MODEL-004,MET-010
+MODEL-006,dim_customer_identity,customers,one row per stable customer,customer_unique_id,,MET-006;MET-007
+MODEL-007,dim_products,products LEFT JOIN translation,one row per product,product_id,,MET-003;MET-011;MET-012;MET-013
+MODEL-008,dim_sellers,sellers,one row per seller,seller_id,,future seller analysis
+MODEL-009,dim_date,generated source bounds,one row per calendar date,date,,MET-001–MET-015
+MODEL-010,agg_order_items,fact_order_items,one row per item-bearing order,order_id,MODEL-002,MET-003;MET-004;MET-005;MET-011;MET-012;MET-013
+MODEL-011,agg_order_payments,fact_payments,one row per payment-bearing order,order_id,MODEL-003,MET-014
+MODEL-012,mart_order_analytics,fact_orders + independent aggregates,one row per order,order_id,MODEL-001;MODEL-005;MODEL-010;MODEL-011,MET-001–MET-015
