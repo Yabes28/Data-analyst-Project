@@ -42,12 +42,13 @@ Only the approved phase may be executed. Specifications must precede implementat
 
 **Work:** Perform distributions, statistical summaries, visual EDA, customer frequency/cohorts, and RFM only if justified; move reusable logic from notebooks into modules.  
 **Exit criteria:** Notebooks run in order from documented environment; figures are reproducible; SQL/Python shared metrics reconcile; observational limitations are stated.
-**Status:** Complete — governed distributions, stable-customer analysis, censoring-aware cohorts, evidence-based RFM feasibility, figures, reconciliation, and validation implemented. Awaiting explicit Phase 6 approval.
+**Status:** Approved and complete — owner final approval received 2026-08-19.
 
 ## Phase 7 — Power BI analytical dataset & dashboard
 
 **Work:** Prepare governed datasets/model, implement validated DAX, and build the three specified views.  
 **Exit criteria:** DASH-001–DASH-010 satisfied; relationship/filter behavior tested; KPI totals reconcile; usability/accessibility review complete; no unsupported visual claim.
+**Status:** Implementation package complete — Power BI Desktop build pending. Governed exports, relationships, 15 DAX definitions, five page layouts, 25 visuals, theme, traceability, build guide, and programmatic validation are complete; actual `.pbix`, executed DAX reconciliation, interaction testing, and real screenshots remain pending explicit Desktop work.
 
 ## Phase 8 — Findings & business recommendations
 

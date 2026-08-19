@@ -1,0 +1,7 @@
+from_table,from_column,to_table,to_column,cardinality,cross_filter_direction,active,rationale,supported_metrics,risk_note
+dim_date,date,bi_orders,purchase_date,one-to-many,single,TRUE,Primary governed purchase-date relationship,MET-001–MET-010;MET-015,Do not activate secondary lifecycle dates
+bi_orders,order_id,bi_order_items,order_id,one-to-many,single,TRUE,Order filters child items safely,MET-003;MET-004;MET-011–MET-013,Never relate items directly to payments
+bi_orders,order_id,bi_payments,order_id,one-to-many,single,TRUE,Order/date context reaches payment sequences,MET-014,Never relate payments directly to items
+bi_orders,order_id,bi_order_reviews,order_id,one-to-zero-or-one,single,TRUE,Approved order-level review aggregate,MET-010,Do not import raw review events
+dim_customer_identity,customer_unique_id,bi_orders,customer_unique_id,one-to-many,single,TRUE,Stable customer identity,MET-006;MET-007,Dimension contains no permanent geography
+dim_date,date,bi_monthly_trends,year_month,one-to-many,single,TRUE,Allows governed Year/Date slicers to filter the calendar-scaffolded monthly reporting table,MET-001;MET-003;MET-005;MET-006;MET-009;MET-015,Month values use first-of-month dates and remain aggregate outputs

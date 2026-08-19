@@ -8,7 +8,7 @@ MET-006,Observed Unique Customers,94986.0,customers,commercial population,94986.
 MET-007,Observed Repeat Customer Rate,0.030393952793043185,ratio,commercial customers in observed window,94986.0,order_purchase_timestamp,APPROVED_WITH_LIMITATION,Not retention or lifetime behavior.,PASS
 MET-008,Average Delivery Lead Time,12.558217098052024,days,endpoint-complete delivered orders,96470.0,order_purchase_timestamp,APPROVED,Timezone-naive; mean is tail-sensitive.,PASS
 MET-009,Late Delivery Rate,0.08112366538820359,ratio,endpoint-complete delivered orders,96470.0,order_purchase_timestamp,APPROVED,Actual delivery later than estimate.,PASS
-MET-010,Average Order-Level Review Score,4.086793415287532,score,all reviewed orders,98673.0,order_purchase_timestamp,APPROVED_WITH_LIMITATION,Order means; repeated-review semantics unavailable.,PASS
+MET-010,Average Order-Level Review Score,4.0867934152875325,score,all reviewed orders,98673.0,order_purchase_timestamp,APPROVED_WITH_LIMITATION,Order means; repeated-review semantics unavailable.,PASS
 MET-011,Item Volume,112101.0,item lines,commercial item population,112101.0,order_purchase_timestamp,APPROVED,Item lines are source sequence records.,PASS
 MET-012,Freight Value,2241126.29,BRL,commercial item population,112101.0,order_purchase_timestamp,APPROVED_WITH_LIMITATION,Recorded freight is not validated logistics cost.,PASS
 MET-013,Freight Burden,0.14242460933957038,ratio,commercial item population,15735527.03,order_purchase_timestamp,APPROVED_WITH_LIMITATION,Weighted aggregate ratio.,PASS

@@ -48,6 +48,13 @@
 | AC-042 | Any RFM segmentation status follows evidence; an unsupported polished segmentation is prohibited. | Feasibility decision and absence-of-segmentation test. |
 | AC-043 | Python figures and compact results regenerate deterministically without altering governed KPI definitions. | Figure manifest, reproducibility hashes, and validation results. |
 | AC-044 | Python findings use non-causal, observation-window-bounded language and contain no final recommendations. | Finding register and findings review. |
+| AC-045 | Power BI imports use governed rebuildable exports with validated grains and hashes. | Export manifest and validation results. |
+| AC-046 | DAX-001–DAX-015 implement MET-001–MET-015 without semantic drift. | DAX catalog and definitions. |
+| AC-047 | Report relationships are single-direction and contain no item-payment, raw-geolocation, or ambiguous many-to-many path. | Relationship specification and governance tests. |
+| AC-048 | Every visual maps to governed requirements, metrics/findings, population, date basis, and denominator context. | Visual catalog and dashboard traceability. |
+| AC-049 | Calendar visuals preserve 26 months, November 2016 no-activity, and partial-period distinctions. | Monthly export and DASH-PERIOD controls. |
+| AC-050 | RFM segmentation and prohibited dashboard terminology are absent. | DASH-RFM-001 and terminology validation. |
+| AC-051 | A report is not marked complete until actual DAX execution and visual/filter checks pass in Power BI Desktop. | DAX reconciliation and manual validation checklist. |
 
 ## Phase 0 acceptance
 

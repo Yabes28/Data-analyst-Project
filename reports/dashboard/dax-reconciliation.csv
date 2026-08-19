@@ -1,0 +1,17 @@
+metric_id,dax_measure,SQL_control_value,DAX_value,difference,tolerance,status,notes
+MET-001,Total Orders,99441,,,0,PENDING_POWER_BI_EXECUTION,Enter unfiltered Desktop value
+MET-002,Delivered Status Orders,96478,,,0,PENDING_POWER_BI_EXECUTION,Enter unfiltered Desktop value
+MET-003,Product GMV,13494400.74,,,0.01,PENDING_POWER_BI_EXECUTION,Freight excluded
+MET-004,Gross Order Value,15735527.03,,,0.01,PENDING_POWER_BI_EXECUTION,Item price plus freight
+MET-005,Average Order Value (Product GMV),137.418922188617,,,0.01,PENDING_POWER_BI_EXECUTION,Item-bearing commercial orders
+MET-006,Observed Unique Customers,94986,,,0,PENDING_POWER_BI_EXECUTION,Stable identity
+MET-007,Observed Repeat Customer Rate,0.0303939527930432,,,0.000000001,PENDING_POWER_BI_EXECUTION,Not retention
+MET-008,Average Delivery Lead Time,12.558217098052,,,0.000000001,PENDING_POWER_BI_EXECUTION,Endpoint-qualified
+MET-009,Late Delivery Rate,0.0811236653882036,,,0.000000001,PENDING_POWER_BI_EXECUTION,Shared denominator
+MET-010,Average Order-Level Review Score,4.08679341528753,,,0.000000001,PENDING_POWER_BI_EXECUTION,Order-level review mean
+MET-011,Item Volume,112101,,,0,PENDING_POWER_BI_EXECUTION,Commercial item lines
+MET-012,Freight Value,2241126.29,,,0.01,PENDING_POWER_BI_EXECUTION,Recorded freight
+MET-013,Freight Burden,0.14242460933957,,,0.000000001,PENDING_POWER_BI_EXECUTION,Weighted aggregate ratio
+MET-014,Recorded Payment Value,16008872.12,,,0.01,PENDING_POWER_BI_EXECUTION,Independent payment fact
+MET-015,On-time Delivery Rate,0.918876334611796,,,0.000000001,PENDING_POWER_BI_EXECUTION,Same denominator as MET-009
+

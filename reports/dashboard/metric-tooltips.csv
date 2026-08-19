@@ -1,0 +1,17 @@
+metric_id,display_name,tooltip
+MET-001,Total Orders,Distinct orders across all lifecycle statuses; canceled and unavailable orders remain included.
+MET-002,Delivered Status Orders,Orders whose source status is delivered; endpoint completeness is not required.
+MET-003,Product GMV,Sum of eligible item prices; freight settlement refunds costs and revenue recognition are not represented.
+MET-004,Gross Order Value,Eligible item prices plus recorded freight; not payment value or revenue.
+MET-005,Average Order Value (Product GMV),Mean order-level Product GMV for commercial item-bearing orders; freight excluded.
+MET-006,Observed Unique Customers,Distinct stable customers observed in eligible orders during the bounded source window.
+MET-007,Observed Repeat Customer Rate,Share with at least two eligible observed orders; not lifetime retention.
+MET-008,Average Delivery Lead Time,Mean purchase-to-delivery days for endpoint-qualified delivered orders; median is diagnostic only.
+MET-009,Late Delivery Rate,Share delivered after estimate among endpoint-qualified delivered orders.
+MET-010,Average Order-Level Review Score,Average of order-level mean review scores; revision semantics are unavailable.
+MET-011,Item Volume,Count of eligible source item lines; not independently proven physical units.
+MET-012,Freight Value,Recorded eligible item freight; not validated carrier cost.
+MET-013,Freight Burden,Aggregate freight divided by gross order value for the same commercial item population.
+MET-014,Recorded Payment Value,Sum of payment-sequence values; not revenue cash received or net sales.
+MET-015,On-time Delivery Rate,Share delivered on or before estimate using exactly the MET-009 denominator.
+

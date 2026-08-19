@@ -1,0 +1,4 @@
+test_id,scope,expected,observed,status,notes
+DASH-REPRO-001,eleven Power BI CSV exports,identical SHA-256 hashes across consecutive builds,identical hashes,PASS,Deterministic DuckDB ordering
+DASH-REPRO-002,export row counts,identical row counts,identical row counts,PASS,Manifest regenerated from governed sources
+DASH-REPRO-003,export validation,11 PASS and zero FAIL,11 PASS and zero FAIL,PASS,No raw file editing
