@@ -12,7 +12,7 @@ Only the approved phase may be executed. Specifications must precede implementat
 
 **Work:** Acquire original Olist files safely; create source manifest/checksums; inspect exact schemas, types, keys, grains, date range, statuses, relationships, and license.  
 **Exit criteria:** DATA-001–DATA-009 evidenced; every expected/missing file accounted for; source grains and customer identity semantics documented; no analytical transformations started; spec changes approved.
-**Status:** Blocked — the nine expected original CSV files are not present in `data/raw/`. Awaiting user-provided Kaggle download; no source validation has been claimed.
+**Status:** Complete — all nine source files, schemas, grains, keys, relationships, customer identity, fanout, source semantics, license, and metric feasibility were validated on 2026-08-19. Awaiting explicit Phase 1 approval before Phase 2.
 
 ## Phase 2 — Data profiling & data quality assessment
 

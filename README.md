@@ -1,6 +1,6 @@
 # Olist E-Commerce Performance & Customer Experience Analytics
 
-> **Status: In development — Phase 0 specification and repository foundation.** No analytical results, business findings, or dashboard claims are published yet.
+> **Status: In development — Phase 1 source validation complete, awaiting approval.** No business analysis, findings, recommendations, or dashboard claims are published yet.
 
 An end-to-end, specification-driven analytics portfolio project using the **Brazilian E-Commerce Public Dataset by Olist**. The project is designed to demonstrate defensible business analysis, relational data modeling, data-quality assessment, SQL, Python, and Power BI delivery without overstating what the source data can support.
 
@@ -12,14 +12,15 @@ This is not a profitability analysis. The public Olist dataset does not provide 
 
 ## Current scope
 
-Phase 0 establishes:
+Completed foundation and source-validation work includes:
 
 - the project charter and business requirements;
 - data-source, grain, quality, metric, model, analysis, dashboard, and acceptance specifications;
 - repository conventions and a phased roadmap;
-- safe acquisition instructions for the original Kaggle files.
+- safe acquisition instructions for the original Kaggle files;
+- reproducible file/schema/key/relationship/grain validation and metric-feasibility assessment.
 
-Implementation and analysis begin only after Phase 0 approval and source-file validation.
+Data-quality classification and analytical implementation begin only after explicit approval of their roadmap phases.
 
 ## Planned workflow
 
@@ -52,4 +53,3 @@ At Phase 0 inspection: Python 3.9, pandas, NumPy, Matplotlib, Jupyter, Git, Node
 ## Governance
 
 Read `AGENTS.md` before contributing. Specifications are authoritative; raw data is immutable; every major output must trace to a requirement ID; and findings must be supported by executed analysis.
-

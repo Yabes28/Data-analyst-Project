@@ -1,0 +1,8 @@
+{
+  "geolocation_zip_key_unique": false,
+  "customer_rows_without_geolocation_zip_match": 278,
+  "customer_distinct_zips_without_match": 157,
+  "seller_rows_without_geolocation_zip_match": 7,
+  "seller_distinct_zips_without_match": 7,
+  "raw_join_warning": "geolocation_zip_code_prefix is non-unique; joining raw geolocation to customers or sellers multiplies entity rows."
+}

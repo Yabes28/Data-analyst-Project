@@ -1,0 +1,8 @@
+parent_table,child_table,join,parent_key_unique,child_key_unique,observed_cardinality,unmatched_child_distinct_keys,unmatched_child_rows,unmatched_parent_distinct_keys,max_child_rows_per_parent_key,fanout_risk
+customers,orders,customer_id = customer_id,True,True,1:1,0,0,0,1,False
+orders,order_items,order_id = order_id,True,False,1:M,0,0,775,21,True
+orders,payments,order_id = order_id,True,False,1:M,0,0,1,29,True
+orders,reviews,order_id = order_id,True,False,1:M,0,0,768,3,True
+products,order_items,product_id = product_id,True,False,1:M,0,0,0,527,True
+sellers,order_items,seller_id = seller_id,True,False,1:M,0,0,0,2033,True
+category_translation,products,product_category_name = product_category_name,True,False,1:M,2,13,0,3029,True

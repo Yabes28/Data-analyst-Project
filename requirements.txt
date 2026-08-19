@@ -1,6 +1,8 @@
-# Phase 0 placeholder. Pin versions after the Phase 1 runtime/tooling decision.
-pandas
-numpy
-matplotlib
-jupyter
+# Validated Phase 1 profiling runtime (Python 3.9).
+pandas==2.1.0
+numpy==1.25.2
+matplotlib==3.7.3
+notebook==7.0.3
 
+# Recommended Phase 4/5 local analytical engine; installation deferred.
+duckdb==1.4.5

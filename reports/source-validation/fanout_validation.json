@@ -1,0 +1,22 @@
+{
+  "orders_in_both_facts": 98665,
+  "orders_with_multiple_items": 9802,
+  "orders_with_multiple_payments": 2936,
+  "orders_with_multiple_items_and_payments": 275,
+  "expected_naive_join_rows_sum_item_x_payment": 117601,
+  "observed_naive_join_rows": 117601,
+  "original_item_rows_for_overlapping_orders": 112647,
+  "original_payment_rows_for_overlapping_orders": 103056,
+  "safe_item_price_sum": 13591508.730000002,
+  "naive_join_item_price_sum": 14209115.340000002,
+  "safe_freight_sum": 2251901.05,
+  "naive_join_freight_sum": 2357428.51,
+  "safe_payment_sum": 15846280.17,
+  "naive_join_payment_sum": 20308134.709999997,
+  "mathematical_rule": "For order o, a direct item-payment join creates I_o * P_o rows; each item repeats P_o times and each payment repeats I_o times.",
+  "safe_options_for_phase_4": [
+    "Keep order_items and payments as separate fact tables.",
+    "Aggregate each fact independently to one row per order before joining.",
+    "Use order as a conformed dimension/bridge and compute measures within their native fact grain."
+  ]
+}

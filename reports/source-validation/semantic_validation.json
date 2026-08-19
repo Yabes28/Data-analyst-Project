@@ -1,0 +1,53 @@
+{
+  "customer_identity": {
+    "customer_rows": 99441,
+    "distinct_customer_id": 99441,
+    "distinct_customer_unique_id": 96096,
+    "customer_unique_ids_with_multiple_customer_ids": 2997,
+    "max_customer_ids_per_unique_id": 17,
+    "customer_ids_mapping_to_multiple_unique_ids": 0,
+    "customer_ids_linked_to_multiple_orders": 0,
+    "max_orders_per_customer_id": 1
+  },
+  "reviews": {
+    "rows": 99224,
+    "distinct_review_id": 98410,
+    "distinct_order_id": 98673,
+    "review_ids_with_multiple_rows": 789,
+    "orders_with_multiple_review_rows": 547,
+    "max_rows_per_review_id": 3,
+    "max_review_rows_per_order": 3,
+    "review_ids_linked_to_multiple_orders": 789,
+    "orders_with_multiple_distinct_review_ids": 547,
+    "exact_duplicate_full_rows": 0,
+    "answer_before_creation": 0
+  },
+  "geolocation": {
+    "rows": 1000163,
+    "distinct_zip_prefixes": 19015,
+    "duplicate_full_rows": 261831,
+    "zip_prefixes_with_multiple_rows": 17972,
+    "max_rows_per_zip_prefix": 1146,
+    "zip_prefixes_with_multiple_cities": 8556,
+    "zip_prefixes_with_multiple_states": 8,
+    "zip_prefixes_with_multiple_coordinates": 17781
+  },
+  "categories": {
+    "products_missing_category": 610,
+    "distinct_product_categories": 73,
+    "translation_rows": 71,
+    "unmatched_product_category_values": [
+      "pc_gamer",
+      "portateis_cozinha_e_preparadores_de_alimentos"
+    ],
+    "translation_values_not_used_by_products": []
+  },
+  "chronology": {
+    "purchase_after_approval": 0,
+    "approval_after_carrier": 1359,
+    "carrier_after_customer_delivery": 23,
+    "purchase_after_customer_delivery": 0,
+    "delivered_status_missing_customer_delivery": 8,
+    "non_delivered_with_customer_delivery": 6
+  }
+}

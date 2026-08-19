@@ -1,11 +1,15 @@
 # Data Source and Schema Specification
 
-**Status:** Pending source validation  
+**Status:** Phase 1 source validation complete  
 **Source identifier:** Kaggle `olistbr/brazilian-ecommerce`
 
 ## Phase 0 finding
 
 No dataset files were present when the repository was inspected. Exact filenames, columns, types, keys, row counts, and grains must be verified in Phase 1. The items below are expected source assets, not validated facts about local files.
+
+## Phase 1 evidence
+
+All nine expected files were acquired manually and validated as readable UTF-8 comma-separated files on 2026-08-19. SHA-256 hashes, sizes, row/column counts, complete schemas, profiles, key tests, and relationship tests are stored under `reports/source-validation/`. The validated data dictionary is `docs/data-dictionary.md`.
 
 ## Expected original CSV files
 
@@ -37,21 +41,29 @@ Do not rename or manually edit original CSVs in `data/raw/`. Record checksums, s
 
 If automated access is unavailable, use Kaggle's browser download and extract the original CSV files into `data/raw/`.
 
-## Source entities and grain hypotheses
+## Validated source entities and grains
 
-| Source entity | Expected grain to validate | Candidate logical key to validate | Key risk |
+| Source entity | Confirmed grain | Validated logical key | Key risk |
 |---|---|---|---|
-| customers | One row per order-linked customer record | customer identifier | Distinguish order-level customer ID from stable unique customer ID. |
-| geolocation | Potentially multiple rows per postal-code prefix | composite/location fields | High duplication; unsafe as a direct dimension join. |
-| order items | One row per order-item sequence | order + item sequence | Multiple products/sellers per order. |
-| payments | One row per order payment sequence/type record | order + payment sequence | Multiple rows per order; do not join directly to items for monetary aggregation. |
-| reviews | Review records associated with orders | review/order identifiers | Possible duplicate or revised order-review relationships. |
-| orders | One row per order | order identifier | Lifecycle status and nullable event timestamps. |
-| products | One row per product | product identifier | Missing/untranslated categories. |
-| sellers | One row per seller | seller identifier | Geography may require careful enrichment. |
-| category translation | One row per source category label | source category label | Translation gaps or duplicates. |
+| customers | One order-associated customer record | `customer_id` | `customer_unique_id` is the validated stable customer grouping identity. |
+| geolocation | One observed coordinate/city/state record for a ZIP prefix | None; tested combinations are non-unique | High duplication; unsafe as a direct dimension join. |
+| order items | One sequential item line within an order | `order_id + order_item_id` | Multiple products/sellers per order. |
+| payments | One payment sequence record within an order | `order_id + payment_sequential` | Multiple rows per order; do not join directly to items for monetary aggregation. |
+| reviews | One source review event row linking review and order | None approved; both IDs repeat | Multiple review/order relationships have no explicit revision indicator. |
+| orders | One order | `order_id` | Lifecycle status and nullable event timestamps. |
+| products | One product | `product_id` | Missing/untranslated categories. |
+| sellers | One seller | `seller_id` | Geography requires normalization or omission. |
+| category translation | One Portuguese category label mapping | `product_category_name` | Two product category values are unmatched. |
 
-These are hypotheses only. No analytical join is authorized until Phase 1 validates actual columns and Phase 4 approves table grains.
+These source grains are validated. Analytical table design and canonical review/geolocation rules remain Phase 4 decisions.
+
+## Customer identity semantics
+
+Observed relationships validate `customer_id` as an order-associated customer record identifier: it is unique in customers and each value links to exactly one order. `customer_unique_id` is the stable cross-order identity: 2,997 values map to multiple `customer_id` records, with a maximum of 17. Future repeat/cohort/RFM analysis must use `customer_unique_id`, subject to approved status and observation-window rules.
+
+## Publication attribution
+
+The Kaggle dataset page identifies the license as CC BY-NC-SA 4.0 and describes the data as anonymized commercial data. Recheck the live license at publication time and include Olist/Kaggle attribution and required license/adaptation notices.
 
 ## Required Phase 1 validations
 
@@ -66,4 +78,3 @@ These are hypotheses only. No analytical join is authorized until Phase 1 valida
 | DATA-007 | Profile status values and lifecycle timestamp completeness by status. |
 | DATA-008 | Determine a safe geolocation normalization/deduplication strategy before joining. |
 | DATA-009 | Record source licensing/attribution requirements for portfolio publication. |
-
