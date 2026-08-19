@@ -34,6 +34,13 @@
 | AC-028 | Product left join preserves every product and implements approved missing/untranslated category policy. | MODEL-007 row/key tests. |
 | AC-029 | Raw geolocation is absent from the current analytical model. | MODEL-GEO-001. |
 | AC-030 | Model rebuild is deterministic and completes with zero hard validation failures. | Two-run build and model validation results. |
+| AC-031 | Every Phase 5 finding traces through BR, MET, MODEL, AN, SQL, and an exported result. | Query index and finding evidence register. |
+| AC-032 | All core SQL metrics independently reconcile under approved tolerances and populations. | Core metric reconciliation artifact. |
+| AC-033 | Partial periods are labeled and excluded from headline period comparisons. | Monthly output and validation tests. |
+| AC-034 | SQL rates and averages retain denominator context and zero-denominator protection. | Query review and validation results. |
+| AC-035 | Customer SQL uses stable identity and observed-window language; seller/category comparisons expose volume context. | Governed outputs and findings review. |
+| AC-036 | Delivery-review analysis uses the approved order-level policy and avoids causal claims. | Review query and evidence register. |
+| AC-037 | Complete SQL analysis reruns deterministically with no hard validation failures. | Runner, hashes, and reproducibility results. |
 
 ## Phase 0 acceptance
 

@@ -1,0 +1,4 @@
+test_id,scope,expected,observed,status,notes
+SQL-REPRO-001,result files,13 identical SHA-256 hashes,13 identical SHA-256 hashes,PASS,Two consecutive full runner executions
+SQL-REPRO-002,result row counts,13 identical row counts,13 identical row counts,PASS,Deterministic ordering and aggregation
+SQL-REPRO-003,finding evidence,identical regenerated evidence,identical regenerated evidence,PASS,Evidence generated from validated results

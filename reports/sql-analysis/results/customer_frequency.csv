@@ -1,0 +1,5 @@
+frequency_group,observed_customers,eligible_orders,product_gmv,frequency_group_aov,min_orders,max_orders
+1 order,92099,92099,12743932.31,138.37661038481585,1,1
+2 orders,2651,5302,650963.95,122.77705582798943,2,2
+3-5 orders,226,725,92893.33,128.12873103448277,3,5
+6+ orders,10,76,6611.15,86.98881578947368,6,16

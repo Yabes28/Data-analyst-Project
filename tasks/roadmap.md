@@ -30,12 +30,13 @@ Only the approved phase may be executed. Specifications must precede implementat
 
 **Work:** Justify and implement the lightweight dimensional model; create grain-safe staging/marts and lineage.  
 **Exit criteria:** MODEL requirements approved; table grains/keys/lineage documented; joins pass cardinality, referential, row-count, and monetary reconciliation tests.
-**Status:** Complete — DuckDB analytical model, native facts, dimensions, safe aggregates, order mart, lineage, metric support, and hard reconciliation/fanout tests implemented. Awaiting explicit Phase 4 approval.
+**Status:** Approved and complete — owner final approval received 2026-08-19.
 
 ## Phase 5 — SQL analysis
 
 **Work:** Execute traceable business analyses using readable CTEs, joins, date logic, windows, rankings, cohorts, and validation queries where appropriate.  
 **Exit criteria:** Approved `AN-*` SQL runs reproducibly; outputs cite requirements/metrics; complete-period and coverage rules are applied; peer-style correctness review completed.
+**Status:** Complete — 13 governed SQL queries, all core metrics, 15/15 reconciliations, 51/51 SQL controls, quantified findings, coverage, and two-run reproducibility evidence produced. Awaiting explicit Phase 5 approval.
 
 ## Phase 6 — Python EDA & customer analysis
 

@@ -1,0 +1,2 @@
+delivery_denominator,average_delivery_lead_time_days,median_delivery_lead_time_days,p90_delivery_lead_time_days,late_orders,on_time_orders,late_delivery_rate,on_time_delivery_rate
+96470,12.558217098052024,10.217476851851853,23.096377314814816,7826,88644,0.08112366538820359,0.9188763346117964

@@ -1,0 +1,16 @@
+metric_id,analytical_result,independent_control,difference,tolerance,status,notes
+MET-001,99441,99441,0,0,PASS,Independent staging/native-grain control
+MET-002,96478,96478,0,0,PASS,Independent staging/native-grain control
+MET-003,13494400.74,13494400.74,0,0.01,PASS,Independent staging/native-grain control
+MET-004,15735527.03,15735527.03,0,0.01,PASS,Independent staging/native-grain control
+MET-005,137.418922188617,137.418922188617,0,0.01,PASS,Independent staging/native-grain control
+MET-006,94986,94986,0,0,PASS,Independent staging/native-grain control
+MET-007,0.0303939527930432,0.0303939527930432,0,1e-09,PASS,Independent staging/native-grain control
+MET-008,12.558217098052,12.5582170980517,3.10862446895044e-13,1e-09,PASS,Independent staging/native-grain control
+MET-009,0.0811236653882036,0.0811236653882036,0,1e-09,PASS,Independent staging/native-grain control
+MET-010,4.08679341528753,4.08679341528753,-8.88178419700125e-16,1e-09,PASS,Independent staging/native-grain control
+MET-011,112101,112101,0,0,PASS,Independent staging/native-grain control
+MET-012,2241126.29,2241126.29,0,0.01,PASS,Independent staging/native-grain control
+MET-013,0.14242460933957,0.14242460933957,0,1e-09,PASS,Independent staging/native-grain control
+MET-014,16008872.12,16008872.12,0,0.01,PASS,Independent staging/native-grain control
+MET-015,0.918876334611796,0.918876334611796,0,1e-09,PASS,Independent staging/native-grain control

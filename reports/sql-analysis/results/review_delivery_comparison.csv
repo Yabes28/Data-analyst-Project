@@ -1,0 +1,3 @@
+delivery_outcome,order_count,reviewed_order_count,average_order_level_review_score,low_score_reviewed_orders,low_score_rate
+LATE,7826,7661,2.566505678109907,4136,0.5398773006134969
+ON_TIME,88644,88163,4.294292012144172,8100,0.09187527647652644

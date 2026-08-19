@@ -1,0 +1,23 @@
+business_requirement_id,analysis_id,query_id,status,evidence_output,finding_id,limitation,future_phase_dependency
+BR-001,AN-001,SQL-001;SQL-003,ANSWERED,reports/sql-analysis/results/,FIND-001,See evidence register,None
+BR-002,AN-001,SQL-001;SQL-003,ANSWERED,reports/sql-analysis/results/,FIND-001,See evidence register,None
+BR-003,AN-001,SQL-003,ANSWERED,reports/sql-analysis/results/,FIND-001,See evidence register,None
+BR-004,AN-002,SQL-009,ANSWERED,reports/sql-analysis/results/,FIND-007,See evidence register,None
+BR-005,AN-003,SQL-001;SQL-004,ANSWERED,reports/sql-analysis/results/,FIND-002,See evidence register,None
+BR-006,AN-003,SQL-004,ANSWERED,reports/sql-analysis/results/,FIND-002,See evidence register,None
+BR-007,AN-004,,DEFERRED,,,Cohort/RFM governed in Phase 6,Phase 6
+BR-008,AN-005,,DEFERRED,,,Cohort/RFM governed in Phase 6,Phase 6
+BR-009,AN-006,SQL-005,ANSWERED,reports/sql-analysis/results/,FIND-003,See evidence register,None
+BR-010,AN-006;AN-011,SQL-005;SQL-011,ANSWERED,reports/sql-analysis/results/,FIND-003,See evidence register,None
+BR-011,AN-006,SQL-005,ANSWERED,reports/sql-analysis/results/,FIND-003,See evidence register,None
+BR-012,AN-007,SQL-006,ANSWERED,reports/sql-analysis/results/,FIND-004,See evidence register,None
+BR-013,AN-007,SQL-006,ANSWERED,reports/sql-analysis/results/,FIND-004,See evidence register,None
+BR-014,AN-007,SQL-006,ANSWERED,reports/sql-analysis/results/,FIND-004,See evidence register,None
+BR-015,AN-008,SQL-007,ANSWERED,reports/sql-analysis/results/,FIND-005,See evidence register,None
+BR-016,AN-002;AN-006;AN-008,SQL-005;SQL-007;SQL-009;SQL-011,ANSWERED,reports/sql-analysis/results/,FIND-005;FIND-007,See evidence register,None
+BR-017,AN-008,SQL-007,ANSWERED,reports/sql-analysis/results/,FIND-005,See evidence register,None
+BR-018,AN-009,SQL-001;SQL-008,ANSWERED,reports/sql-analysis/results/,FIND-006,See evidence register,None
+BR-019,AN-010,SQL-008,ANSWERED,reports/sql-analysis/results/,FIND-006,See evidence register,None
+BR-020,AN-006;AN-007;AN-009,SQL-005;SQL-006;SQL-008;SQL-009,ANSWERED,reports/sql-analysis/results/,FIND-003;FIND-006;FIND-007,See evidence register,None
+BR-021,AN-011,SQL-001;SQL-010;SQL-011,ANSWERED,reports/sql-analysis/results/,FIND-008,See evidence register,None
+BR-022,AN-001–AN-011,SQL-001–SQL-011,ANSWERED,reports/sql-analysis/results/,FIND-001–FIND-008,See evidence register,None
